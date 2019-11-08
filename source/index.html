@@ -21,8 +21,14 @@
         <ul class="main-nav__list user-list">
           <li class="user-list__item">
             <form class="user-list__seach-form" action="https://echo.htmlacademy.ru" method="POST">
-              <input class="user-list__seach-input" type="seach">
+              <label class="user-list__seach-label" for="seach-input">
+                <span class="visually-hidden">Поиск по сайту</span>
+              </label>
+              <input class="user-list__seach-input" type="seach" name="seach" id="seach-input" placeholder="Поиск по сайту" value="">
             </form>
+          </li>
+          <li class="user-list__item">
+            <a class="user-list__link-card" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
