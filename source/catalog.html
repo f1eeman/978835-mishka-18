@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo-image" src="" width="" height="" alt="Интернет-магазин ручных работ для дома «Мишка»">
+      </a>
+      <nav class="page-header__main-nav main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--current">
+            <a class="site-list__link" href="#">Каталог товаров</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Вязание на заказ</a>
+          </li>
+        </ul>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item">
+            <form class="user-list__seach-form seach-form" action="https://echo.htmlacademy.ru" method="POST">
+              <label class="seach-form__label" for="seach-input">
+                <span class="visually-hidden">Поиск по сайту</span>
+              </label>
+              <input class="seach-form__control" type="seach" name="seach" id="seach-input" placeholder="Поиск по сайту" value="">
+            </form>
+          </li>
+          <li class="user-list__item">
+            <a class="user-list__link-card" href="#">Корзина: пока пуста</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="page-main__caption">Каталог товаров</h1>
+      <section class="page-main__catalog catalog">
+        <h2 class="catalog__caption visually-hidden">Список товаров</h2>
+        <ul class="catalog__list">
+          <li class="catalog__item product">
+            <a class="product__link" href="#">
+              <h3 class="product__title">Зайчик-попрыгайчик</h3>
+              <p class="product__image-box">
+                <img class="product__image" src="" width="" height="" alt="Зайчик-попрыгайчик">
+              </p>
+            </a>
+            <p class="product__description">Рост 30 см, вес 200 г</p>
+            <p class="product__price">
+              <b class="product__price-content">1 200 руб.</b>
+              <a class="product__add-to-catd" href="#">
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+            </p>
+          </li>
+          <li class="catalog__item product">
+            <a class="product__link" href="#">
+              <h3 class="product__title">Корзинка для белья</h3>
+              <p class="product__image-box">
+                <img class="product__image" src="" width="" height="" alt="Корзинка для белья">
+              </p>
+            </a>
+            <p class="product__description">Диаметр 15 см, высота 10 см</p>
+            <p class="product__price">
+              <b class="product__price-content">690 руб.</b>
+              <a class="product__add-to-catd" href="#">
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+            </p>
+          </li>
+          <li class="catalog__item product">
+            <a class="product__link" href="#">
+              <h3 class="product__title">Большая корзинка для игрушек</h3>
+              <p class="product__image-box">
+                <img class="product__image" src="" width="" height="" alt="Большая корзинка для игрушек">
+              </p>
+            </a>
+            <p class="product__description">Диаметр 30 см, высота 30 см</p>
+            <p class="product__price">
+              <b class="product__price-content">1 500 руб.</b>
+              <a class="product__add-to-catd" href="#">
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="page-main__production-process production-process">
+        <h2 class="production-process__title">Процесс производства</h2>
+        <div class="production-process__video-box">
+          <img class="production-process__image" src="" width="" height="" alt="">
+          <button class="production-process__play" type="button">Включить видео</button>
+        </div>
+        <p class="production-process__info">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <a class="production-process__make-order button" href="#">Сделать заказ</a>
+      </section>
+    </main>
+    <footer class="page-footer">
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
+                <span class="visually-hidden">Мы в Инстаграме</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+                <span class="visually-hidden">Мы в Фейсбуке</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">
+                <span class="visually-hidden">Мы в Вконтакте</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="visually-hidden">HTML Academy</span>
+          </a>
+        </div>
+    </footer>
+    <section class="page-modal-card modal-card">
+      <h2 class="modal-card__title">Добавить в корзину</h2>
+      <p class="modal-card__choice-size">Выберите размер:</p>
+      <form class="modal-card__form form-card" action="https://echo.htmlacademy.ru" method="POST">
+        <p class="form-card__wrap">
+          <label class="form-card__label" for="size-s">s</label>
+          <input class="form-card__control form-card__control--radio visually-hidden" id="size-s" name="size" type="radio"  value="s" >
+        </p>
+        <p class="form-card__wrap">
+          <label class="form-card__label" for="size-m">m</label>
+          <input class="form-card__control form-card__control--radio visually-hidden" id="size-m" name="size" type="radio"  value="m" >
+        </p>
+        <p class="form-card__wrap">
+          <label class="form-card__label" for="size-l">l</label>
+          <input class="form-card__control form-card__control--radio visually-hidden" id="size-l" name="size" type="radio"  value="l" >
+        </p>
+        <button class="form-card__add-to-card" type="submit">Добавить</button>
+      </form>
+    </section>
+  </body>
+</html>
