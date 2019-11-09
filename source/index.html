@@ -25,7 +25,7 @@
               <label class="seach-form__label" for="seach-input">
                 <span class="visually-hidden">Поиск по сайту</span>
               </label>
-              <input class="seach-form__control" type="seach" name="seach" id="seach-input" placeholder="Поиск по сайту" value="">
+              <input class="seach-form__control seach-form__control--seach" id="seach-input" name="seach" type="seach" placeholder="Поиск по сайту" value="">
             </form>
           </li>
           <li class="user-list__item">
@@ -110,10 +110,10 @@
           </ul>
           <p class="reviews__buttons-box">
             <button class="reviews__prev" type="button">
-              <span class="visually hidden">Предыдущий отзыв</span>
+              <span class="visually-hidden">Предыдущий отзыв</span>
             </button>
             <button class="reviews__next" type="button">
-              <span class="visually hidden">Следующий отзыв</span>
+              <span class="visually-hidden">Следующий отзыв</span>
             </button>
           </p>
           <a class="reviews__write button" href="#">Написать</a>
@@ -168,19 +168,22 @@
     </footer>
     <section class="page-modal-card modal-card">
       <h2 class="modal-card__title">Добавить в корзину</h2>
-      <span class="modal-card__choice-size">Выберите размер:</span>
-      <ul class="modal-card__size-list">
-        <li class="modal-card__size-item">
-          <button class="modal-card__size" type="button">S</button>
-        </li>
-        <li class="modal-card__size-item">
-          <button class="modal-card__size" type="button">M</button>
-        </li>
-        <li class="modal-card__size-item">
-          <button class="modal-card__size" type="button">L</button>
-        </li>
-      </ul>
-      <button class="modal-card__add-to-card">Добавить</button>
+      <p class="modal-card__choice-size">Выберите размер:</p>
+      <form class="modal-card__form form-card" action="https://echo.htmlacademy.ru" method="POST">
+        <p class="form-card__wrap">
+          <label class="form-card__label" for="size-s">s</label>
+          <input class="form-card__control form-card__control--radio visually-hidden" id="size-s" name="size" type="radio"  value="s" >
+        </p>
+        <p class="form-card__wrap">
+          <label class="form-card__label" for="size-m">m</label>
+          <input class="form-card__control form-card__control--radio visually-hidden" id="size-m" name="size" type="radio"  value="m" >
+        </p>
+        <p class="form-card__wrap">
+          <label class="form-card__label" for="size-l">l</label>
+          <input class="form-card__control form-card__control--radio visually-hidden" id="size-l" name="size" type="radio"  value="l" >
+        </p>
+        <button class="form-card__add-to-card" type="submit">Добавить</button>
+      </form>
     </section>
   </body>
 </html>
