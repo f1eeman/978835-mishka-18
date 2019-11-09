@@ -45,8 +45,8 @@
               <p class="product__image-box">
                 <img class="product__image" src="" width="" height="" alt="Зайчик-попрыгайчик">
               </p>
-              <p class="product__description">Рост 30 см, вес 200 г</p>
             </a>
+            <p class="product__description">Рост 30 см, вес 200 г</p>
             <p class="product__price">
               <b class="product__price-content">1 200 руб.</b>
               <a class="product__add-to-catd">
@@ -60,8 +60,8 @@
               <p class="product__image-box">
                 <img class="product__image" src="" width="" height="" alt="Корзинка для белья">
               </p>
-              <p class="product__description">Диаметр 15 см, высота 10 см</p>
             </a>
+            <p class="product__description">Диаметр 15 см, высота 10 см</p>
             <p class="product__price">
               <b class="product__price-content">690 руб.</b>
               <a class="product__add-to-catd">
@@ -75,8 +75,8 @@
               <p class="product__image-box">
                 <img class="product__image" src="" width="" height="" alt="Большая корзинка для игрушек">
               </p>
-              <p class="product__description">Диаметр 30 см, высота 30 см</p>
             </a>
+            <p class="product__description">Диаметр 30 см, высота 30 см</p>
             <p class="product__price">
               <b class="product__price-content">1 500 руб.</b>
               <a class="product__add-to-catd">
@@ -89,7 +89,8 @@
       <section class="page-main__production-process production-process">
         <h2 class="production-process__title">Процесс производства</h2>
         <div class="production-process__video-box">
-          <!-- Не совсем понял как реализовать. Имеются Вопросы. Нужна консультация. -->
+          <img class="production-process__image" src="" width="" height="" alt="">
+          <button class="production-process__play" type="button">Включить видео</button>
         </div>
         <p class="production-process__info">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <a class="production-process__make-order button" href="#">Сделать заказ</a>
@@ -124,19 +125,22 @@
     </footer>
     <section class="page-modal-card modal-card">
       <h2 class="modal-card__title">Добавить в корзину</h2>
-      <span class="modal-card__choice-size">Выберите размер:</span>
-      <ul class="modal-card__size-list">
-        <li class="modal-card__size-item">
-          <button class="modal-card__size" type="button">S</button>
-        </li>
-        <li class="modal-card__size-item">
-          <button class="modal-card__size" type="button">M</button>
-        </li>
-        <li class="modal-card__size-item">
-          <button class="modal-card__size" type="button">L</button>
-        </li>
-      </ul>
-      <button class="modal-card__add-to-card">Добавить</button>
+      <p class="modal-card__choice-size">Выберите размер:</p>
+      <form class="modal-card__form form-card" action="https://echo.htmlacademy.ru" method="POST">
+        <p class="form-card__wrap">
+          <label class="form-card__label" for="size-s">s</label>
+          <input class="form-card__control form-card__control--radio visually-hidden" id="size-s" name="size" type="radio"  value="s" >
+        </p>
+        <p class="form-card__wrap">
+          <label class="form-card__label" for="size-m">m</label>
+          <input class="form-card__control form-card__control--radio visually-hidden" id="size-m" name="size" type="radio"  value="m" >
+        </p>
+        <p class="form-card__wrap">
+          <label class="form-card__label" for="size-l">l</label>
+          <input class="form-card__control form-card__control--radio visually-hidden" id="size-l" name="size" type="radio"  value="l" >
+        </p>
+        <button class="form-card__add-to-card" type="submit">Добавить</button>
+      </form>
     </section>
   </body>
 </html>
