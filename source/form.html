@@ -35,7 +35,46 @@
       </nav>
     </header>
     <main class="page-main">
-
+      <h1 class="page-main__title">Вязание на заказ</h1>
+      <section class="page-main__filters">
+        <h2 class="visually-hidden">Фильтр заказа</h2>
+        <form class="page-main__filter filter" action="https://echo.htmlacademy.ru" method="GET">
+          <fieldset class="filter__fieldset">
+            <legend class="filter__legend">Тип</legend>
+            <ul class="filter__type-list">
+              <li class="filter__type-item">
+                <input class="filter__control filter__control--radio visually-hidden" id="accessory" name="type" type="radio" value="interior-accessory" checked>
+                <label class="filter__label" for="accessory">Аксессуар для интерьера</label>
+              </li>
+              <li class="filter__type-item">
+                <input class="filter__control filter__control--radio visually-hidden" id="toy" name="type" type="radio" value="toy">
+                <label class="filter__label" for="toy">Детская игрушка</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter__fieldset">
+            <legend class="filter__legend">Цвет</legend>
+            <ul>
+              <li></li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter__fieldset">
+            <legend class="filter__legend">ФИО</legend>
+            <ul>
+              <li></li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter__fieldset">
+            <legend class="filter__legend">Тел</legend>
+          </fieldset>
+          <fieldset class="filter__fieldset">
+            <legend class="filter__legend">e-mail</legend>
+          </fieldset>
+          <fieldset class="filter__fieldset">
+            <legend class="filter__legend">Доп</legend>
+          </fieldset>
+        </form>
+      </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__social social">
