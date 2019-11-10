@@ -13,10 +13,10 @@
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--current">
-            <a class="site-list__link" href="#">Каталог товаров</a>
+            <a class="site-list__link">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="#">Вязание на заказ</a>
+            <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
         <ul class="main-nav__list user-list">
@@ -29,13 +29,13 @@
             </form>
           </li>
           <li class="user-list__item">
-            <a class="user-list__link-card" href="#">Корзина: пока пуста</a>
+            <a class="user-list__link-cart" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="page-main__caption">Каталог товаров</h1>
+      <h1 class="page-main__title">Каталог товаров</h1>
       <section class="page-main__catalog catalog">
         <h2 class="catalog__caption visually-hidden">Список товаров</h2>
         <ul class="catalog__list">
@@ -97,49 +97,49 @@
       </section>
     </main>
     <footer class="page-footer">
-        <div class="page-footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
-                <span class="visually-hidden">Мы в Инстаграме</span>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
+              <span class="visually-hidden">Мы в Инстаграме</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">
+              <span class="visually-hidden">Мы в Вконтакте</span>
               </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
-                <span class="visually-hidden">Мы в Фейсбуке</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">
-                <span class="visually-hidden">Мы в Вконтакте</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="page-footer__copyright copyright">
-          <b class="copyright__text">Разработано</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <span class="visually-hidden">HTML Academy</span>
-          </a>
-        </div>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <b class="copyright__text">Разработано</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">HTML Academy</span>
+        </a>
+      </div>
     </footer>
-    <section class="page-modal-card modal-card">
-      <h2 class="modal-card__title">Добавить в корзину</h2>
-      <p class="modal-card__choice-size">Выберите размер:</p>
-      <form class="modal-card__form form-card" action="https://echo.htmlacademy.ru" method="POST">
-        <p class="form-card__wrap">
-          <label class="form-card__label" for="size-s">s</label>
-          <input class="form-card__control form-card__control--radio visually-hidden" id="size-s" name="size" type="radio"  value="s" >
+    <section class="page-modal-cart modal-cart">
+      <h2 class="modal-cart__title">Добавить в корзину</h2>
+      <p class="modal-cart__choice-size">Выберите размер:</p>
+      <form class="modal-cart__form form-cart" action="https://echo.htmlacademy.ru" method="POST">
+        <p class="form-cart__wrap">
+          <label class="form-cart__label" for="size-s">S</label>
+          <input class="form-cart__control form-cart__control--radio visually-hidden" id="size-s" name="size" type="radio"  value="s" >
         </p>
-        <p class="form-card__wrap">
-          <label class="form-card__label" for="size-m">m</label>
-          <input class="form-card__control form-card__control--radio visually-hidden" id="size-m" name="size" type="radio"  value="m" >
+        <p class="form-cart__wrap">
+          <label class="form-cart__label" for="size-m">M</label>
+          <input class="form-cart__control form-cart__control--radio visually-hidden" id="size-m" name="size" type="radio"  value="m" >
         </p>
-        <p class="form-card__wrap">
-          <label class="form-card__label" for="size-l">l</label>
-          <input class="form-card__control form-card__control--radio visually-hidden" id="size-l" name="size" type="radio"  value="l" >
+        <p class="form-cart__wrap">
+          <label class="form-cart__label" for="size-l">L</label>
+          <input class="form-cart__control form-cart__control--radio visually-hidden" id="size-l" name="size" type="radio"  value="l" >
         </p>
-        <button class="form-card__add-to-card" type="submit">Добавить</button>
+        <button class="form-cart__add-to-cart" type="submit">Добавить</button>
       </form>
     </section>
   </body>
