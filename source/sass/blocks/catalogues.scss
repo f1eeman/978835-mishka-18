@@ -1,0 +1,16 @@
+.catalogues__list {
+  @include list-reset ();
+}
+
+.catalogues__link {
+  @include text (19px, 24px);
+  color: $color-text-catalogues;
+}
+
+.catalogues__link--interior {
+  background-color: $color-ctlgs-intr-bg;
+}
+
+.catalogues__link--toys {
+  background-color: $color-ctlgs-ts-bg;
+}

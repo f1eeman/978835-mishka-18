@@ -36,12 +36,12 @@
 .site-list__link {
   color: $main-color-text;
 
-  &:hover,
-  &:focus {
+  &[href]:hover,
+  &[href]:focus {
     color: $main-color-text-opacity-hover;
   }
 
-  &:active {
+  &[href]:active {
     color: $main-color-text-opacity-down;
   }
 }

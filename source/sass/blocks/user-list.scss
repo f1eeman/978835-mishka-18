@@ -69,8 +69,8 @@
     background-position: 0 0;
   }
 
-  &:hover,
-  &:focus {
+  &[href]:hover,
+  &[href]:focus {
     color: $main-color-text-opacity-hover;
   }
 
@@ -79,7 +79,7 @@
     background-image: url("../../img/icon-cart-hover-and-focus.svg");
   }
 
-  &:active {
+  &[href]:active {
     color: $main-color-text-opacity-down;
   }
 

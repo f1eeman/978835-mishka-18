@@ -1,0 +1,26 @@
+.popular-item__title {
+  @include text(25px, 30px);
+}
+
+.popular-item__special-offer {
+  color: $color-text-spec-off;
+}
+
+.popular-item__description {
+  @include text (15px, 24px, 400);
+  color: $color-text-pi-dsrp;
+}
+
+.popular-item__characteristics-list {
+  @include text (15px, 20px, 400);
+  color: $color-text-pi-dsrp;
+}
+
+.popular-item__image-box {
+  width: 260;
+  height: 315;
+}
+
+.popular-item__price {
+  color: $color-text-pi-dsrp;
+}

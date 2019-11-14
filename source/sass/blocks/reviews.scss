@@ -1,0 +1,25 @@
+.reviews__title {
+  @include text(25px, 30px);
+}
+
+.reviews__list {
+  @include list-reset();
+}
+
+.reviews__quotation {
+  margin: 0;
+  padding: 0;
+}
+
+.reviews__text {
+  margin: 0;
+  padding: 0;
+
+  @include text(15px, 30px, 400);
+  color: $color-text-rvws;
+}
+
+.reviews__author-account {
+  @include text(15px, 30px, 400);
+  color: $color-text-rvws;
+}

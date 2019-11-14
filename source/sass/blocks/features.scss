@@ -1,0 +1,11 @@
+.features__title {
+  @include text(25px, 30px);
+}
+
+.features__list {
+  @include list-reset();
+}
+
+.features__item {
+  @include text(17px, 20px);
+}
