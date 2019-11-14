@@ -1,0 +1,32 @@
+.page-header__container {
+  position: relative;
+
+  border-top: 1px solid $color-border-ph;
+  border-bottom: 1px solid $color-border-ph;
+}
+
+.page-header__logo-box {
+  display: flex;
+  justify-content: center;
+  min-height: 79px;
+  margin: 0;
+  padding: 0;
+}
+
+.page-header__logo {
+  display: block;
+  align-self: center;
+  width: 86px;
+  height: 35px;
+}
+
+.page-header__logo[href="index.html"] {
+  &:hover,
+  &:focus {
+    opacity: $opacity-hover;
+  }
+
+  &:active {
+    opacity: $opacity-down;
+  }
+}
