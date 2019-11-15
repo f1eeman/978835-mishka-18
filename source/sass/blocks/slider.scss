@@ -1,0 +1,46 @@
+.slider__button {
+  width: 48px;
+  height: 4px;
+  border: none;
+
+  background-color: $color-slider-btn-bg;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+
+    display: block;
+    width: 60%;
+    height: 4px;
+
+    background-color: $color-slider-btn-bg;
+  }
+
+  &::before {
+    transform: translate(25px, -7.5px) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(25px, 1px) rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus {
+    opacity: $opacity-hover;
+  }
+
+  &:active {
+    opacity: $opacity-down;
+  }
+}
+
+.slider__button--prev {
+  transform: rotate(180deg);
+}
+
+
+// Временно, чтобы кнопки отображались нормально
+.slider__buttons-box {
+  padding: 10px;
+}

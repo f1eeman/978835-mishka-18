@@ -1,0 +1,7 @@
+.page-footer {
+  background-color: $color-footer-bg;
+}
+
+.social__list {
+  @include list-reset();
+}

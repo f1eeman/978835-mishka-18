@@ -119,10 +119,10 @@
             </li>
           </ul>
           <p class="slider__buttons-box">
-            <button class="slider__prev" type="button">
+            <button class="slider__button slider__button--prev" type="button">
               <span class="visually-hidden">Предыдущий отзыв</span>
             </button>
-            <button class="slider__next" type="button">
+            <button class="slider__button slider__button--next" type="button">
               <span class="visually-hidden">Следующий отзыв</span>
             </button>
           </p>
@@ -135,7 +135,7 @@
           <tr>
             <td class="contacts__type">email:</td>
             <td class="contacts__value">
-              <a href="#">info@mimimishkashop.ru</a>
+              <a class="contacts__email" href="#">info@mimimishkashop.ru</a>
             </td>
           </tr>
           <tr>
@@ -181,15 +181,15 @@
       <p class="modal-cart__choice-size">Выберите размер:</p>
       <form class="modal-cart__form form-cart" action="https://echo.htmlacademy.ru" method="POST">
         <p class="form-cart__wrap">
-          <label class="form-cart__label" for="size-s">s</label>
+          <label class="form-cart__label" for="size-s">S</label>
           <input class="form-cart__control form-cart__control--radio visually-hidden" id="size-s" name="size" type="radio"  value="s" >
         </p>
         <p class="form-cart__wrap">
-          <label class="form-cart__label" for="size-m">m</label>
+          <label class="form-cart__label" for="size-m">M</label>
           <input class="form-cart__control form-cart__control--radio visually-hidden" id="size-m" name="size" type="radio"  value="m" >
         </p>
         <p class="form-cart__wrap">
-          <label class="form-cart__label" for="size-l">l</label>
+          <label class="form-cart__label" for="size-l">L</label>
           <input class="form-cart__control form-cart__control--radio visually-hidden" id="size-l" name="size" type="radio"  value="l" >
         </p>
         <button class="form-cart__add-to-cart" type="submit">Добавить</button>
