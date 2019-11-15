@@ -4,6 +4,8 @@
   margin: 0;
   padding: 0;
   padding-left: 46px;
+
+  outline: 2px solid yellow;
 }
 
 .seach-form__control {
@@ -28,34 +30,3 @@
   }
 }
 
-.seach-form__label {
-  position: absolute;
-  top: 4px;
-  left: 0;
-
-  width: 18px;
-  height: 18px;
-
-  background-image: url("../../img/icon-search-static.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-
-  cursor: pointer;
-  // background-color: yellow;
-  &::before {
-    content: "";
-
-    background-image: url("../../img/icon-search-hover-and-focus.svg");
-
-    visibility: hidden;
-  }
-
-  &:hover,
-  &:focus {
-    background-image: url("../../img/icon-search-hover-and-focus.svg");
-  }
-
-  &:active {
-    opacity: $opacity-down;
-  }
-}

@@ -45,45 +45,14 @@
 
   color: $main-color-text;
 
-  &::after {
-    content: "";
-
-    background-image: url("../../img/icon-cart-hover-and-focus.svg");
-
-    visibility: hidden;
-  }
-
-  &::before {
-    content: "";
-
-    position: absolute;
-    top: 50%;
-    left: 0;
-
-    width: 21px;
-    height: 18px;
-    margin-top: -9px;
-
-    background-image: url("../../img/icon-cart-static.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-  }
+  outline: 2px solid red;
 
   &[href]:hover,
   &[href]:focus {
     color: $main-color-text-opacity-hover;
   }
 
-  &:hover::before,
-  &:focus::before {
-    background-image: url("../../img/icon-cart-hover-and-focus.svg");
-  }
-
   &[href]:active {
     color: $main-color-text-opacity-down;
-  }
-
-  &:active::before {
-    opacity: $opacity-down;
   }
 }

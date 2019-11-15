@@ -4,16 +4,19 @@
 
 .popular-item__special-offer {
   color: $color-text-spec-off;
+  text-transform: uppercase;
 }
 
 .popular-item__description {
   @include text (15px, 24px, 400);
-  color: $color-text-pi-dsrp;
+
+  color: $secondary-color-text;
 }
 
 .popular-item__characteristics-list {
   @include text (15px, 20px, 400);
-  color: $color-text-pi-dsrp;
+
+  color: $secondary-color-text;
 }
 
 .popular-item__image-box {
@@ -22,5 +25,5 @@
 }
 
 .popular-item__price {
-  color: $color-text-pi-dsrp;
+  color: $secondary-color-text;
 }

@@ -17,7 +17,7 @@
 
   @include text(15px, 30px, 400);
   font-style: normal;
-  color: $color-text-rvws;
+  color: $secondary-color-text;
 }
 
 .reviews__author {
@@ -27,5 +27,5 @@
 .reviews__author-account {
   @include text(15px, 30px, 400);
   font-style: normal;
-  color: $color-text-rvws;
+  color: $secondary-color-text;
 }
