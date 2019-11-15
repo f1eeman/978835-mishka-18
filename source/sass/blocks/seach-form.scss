@@ -13,6 +13,15 @@
   font: inherit;
 
   background-color: transparent;
+
+  &:hover::placeholder,
+  &:focus::placeholder {
+    color: $main-color-text-opacity-hover;
+  }
+
+  &:active::placeholder {
+    color: $main-color-text-opacity-down;
+  }
 }
 
 ::placeholder {
