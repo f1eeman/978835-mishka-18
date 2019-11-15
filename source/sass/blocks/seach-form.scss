@@ -14,6 +14,10 @@
 
   background-color: transparent;
 
+  &::placeholder {
+    color: $main-color-text;
+  }
+
   &:hover::placeholder,
   &:focus::placeholder {
     color: $main-color-text-opacity-hover;
@@ -22,10 +26,6 @@
   &:active::placeholder {
     color: $main-color-text-opacity-down;
   }
-}
-
-::placeholder {
-  color: $main-color-text;
 }
 
 .seach-form__label {

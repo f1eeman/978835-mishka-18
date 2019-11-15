@@ -1,0 +1,70 @@
+.filter-form__fieldset {
+  border: none;
+}
+
+.filter-form__legend {
+  @include text(17px, 16px);
+
+  color: $color-text-legend;
+  text-transform: uppercase;
+}
+
+.filter-form__list {
+  @include list-reset();
+}
+
+.filter-form__label {
+  @include text(17px, 18px);
+
+  cursor: pointer;
+}
+
+.filter-form__control {
+  padding-bottom: 13px;
+  border: none;
+  border-bottom: 2px solid $color-border-form-filter;
+
+  font: inherit;
+
+  &::placeholder {
+    @include text(17px, 18px, 400);
+    color: $secondary-color-text-plchdr;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom-color: $color-border-form-filter-hover;
+  }
+
+  &:active {
+    border-bottom-color: $color-border-form-filter-hover;
+  }
+}
+
+.filter-form__control--textarea {
+  padding: 15px;
+  border: 2px solid $color-border-form-filter;
+
+  &:hover,
+  &:focus {
+    border-color: $color-border-form-filter-hover;
+  }
+
+  &:active {
+    border-color: $color-border-form-filter-hover;
+  }
+}
+
+.filter-form__reference {
+  @include text(14px, 16px, 400);
+
+  color: $secondary-color-text;
+}
+
+.filter-form__button {
+  border: none;
+
+  font: inherit;
+
+  background-color: transparent;
+}
