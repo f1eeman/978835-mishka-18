@@ -1,0 +1,16 @@
+.form-cart__label {
+  @include text(17px, 16px);
+}
+
+.form-cart__add-to-cart {
+  border: none;
+
+  font: inherit;
+
+  @include text(17px, 16px);
+  color: $color-text-btn-cart;
+  text-transform: uppercase;
+
+  background-color: $color-btn-cart-bg;
+  cursor: pointer;
+}

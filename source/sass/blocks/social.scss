@@ -1,0 +1,16 @@
+.social__list {
+  @include list-reset();
+}
+
+.social__icon {
+  fill: $color-social-bg;
+
+  &:hover,
+  &:focus {
+    fill: $color-social-bg-hover;
+  }
+
+  &:active {
+    fill: $color-social-bg-active;
+  }
+}

@@ -1,0 +1,13 @@
+.modal-cart {
+  text-align: center;
+
+  background-color: $color-modal-bg;
+}
+
+.modal-cart__title {
+  @include text(30px, 57px);
+}
+
+.modal-cart__choice-size {
+  @include text(17px, 30px, 400);
+}

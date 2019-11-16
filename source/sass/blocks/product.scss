@@ -1,0 +1,40 @@
+.product__title {
+  @include text(17px, 24px);
+
+  color: $main-color-text;
+
+  &:hover,
+  &:focus {
+    color: $main-color-text-opacity-hover;
+  }
+
+  &:active {
+    color: $main-color-text-opacity-down;
+  }
+}
+
+.product__image-box {
+  margin: 0;
+  padding: 0;
+
+  width: 260px;
+  height: 195px;
+}
+
+.product__description {
+  margin: 0;
+  padding: 0;
+
+  @include text(13px, 30px, 400);
+
+  color: $secondary-color-text;
+}
+
+.product__price {
+  margin: 0;
+  padding: 0;
+}
+
+.product__price-content {
+  @include text(15px, 24px);
+}

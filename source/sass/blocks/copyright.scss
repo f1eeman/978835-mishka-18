@@ -1,0 +1,22 @@
+.copyright__logo {
+  fill: $color-html-ac-bg;
+}
+
+.copyright__link {
+  @include text(19px, 18px);
+
+  color: $main-color-text;
+
+  &:hover .copyright__logo,
+  &:focus .copyright__logo {
+    fill: $color-html-ac-bg-hover;
+  }
+
+  &:active {
+    color: $main-color-text-opacity-hover;
+  }
+
+  &:active .copyright__logo {
+    fill: $color-html-ac-bg-active;
+  }
+}

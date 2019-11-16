@@ -1,0 +1,31 @@
+.seach-form__wrap {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+  padding-left: 46px;
+
+  outline: 2px solid yellow;
+}
+
+.seach-form__control {
+  width: 90%;
+  border: none;
+
+  font: inherit;
+
+  background-color: transparent;
+
+  &::placeholder {
+    color: $main-color-text;
+  }
+
+  &:hover::placeholder,
+  &:focus::placeholder {
+    color: $main-color-text-opacity-hover;
+  }
+
+  &:active::placeholder {
+    color: $main-color-text-opacity-down;
+  }
+}

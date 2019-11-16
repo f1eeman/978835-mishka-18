@@ -1,0 +1,18 @@
+.button {
+  color: $secondary-color-text;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: $color-text-btn-hover;
+
+    background-color: $color-btn-bg;
+  }
+
+  &:active {
+    color: $color-text-btn-active;
+
+    background-color: $color-btn-bg;
+  }
+}

@@ -1,0 +1,17 @@
+@mixin size-img($max-width: 100%, $height: auto) {
+  max-width: $max-width;
+  height: $height;
+}
+
+@mixin text($font-size: 17px, $line-height: 20px, $font-weight: 700) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
+
+// Сброс маргинов, паддингов, маркеров для <ul>
+@mixin list-reset() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

@@ -1,0 +1,7 @@
+.page-main__title {
+  @include text(27px, 30px);
+}
+
+.page-main__title--catalog-page {
+  background-color: $colot-h1-ctlg-bg;
+}
