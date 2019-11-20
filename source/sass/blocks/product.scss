@@ -38,3 +38,46 @@
 .product__price-content {
   @include text(15px, 24px);
 }
+
+@media (min-width: $tablet-width) {
+  .product {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 334px;
+    margin-bottom: 54px;
+    padding-left: 334px;
+  }
+
+  .product__description {
+    margin-bottom: auto;
+  }
+
+  .product__image-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 334px;
+    height: 334px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product {
+    width: 316px;
+    min-height: auto;
+    margin-bottom: auto;
+    padding-top: 462px;
+    padding-left: 0;
+  }
+
+  .product__image-box {
+    top: 0;
+    left: 0;
+
+    width: 316px;
+    height: 462px;
+  }
+}
