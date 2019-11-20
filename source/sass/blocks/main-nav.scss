@@ -1,3 +1,29 @@
+.main-nav__logo-box {
+  display: flex;
+  justify-content: center;
+  min-height: 79px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav__logo {
+  display: block;
+  align-self: center;
+  width: 86px;
+  height: 35px;
+}
+
+.main-nav__logo[href="index.html"] {
+  &:hover,
+  &:focus {
+    opacity: $opacity-hover;
+  }
+
+  &:active {
+    opacity: $opacity-down;
+  }
+}
+
 .main-nav__toggle {
   position: absolute;
   top: 27px;
@@ -66,6 +92,11 @@
   .main-nav {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .main-nav__logo-box {
+    min-height: auto;
   }
 }
 
@@ -73,6 +104,9 @@
   .main-nav {
     width: 100%;
     justify-content: space-between;
-    align-items: center;
+  }
+
+  .main-nav__logo-box {
+    order: 1;
   }
 }

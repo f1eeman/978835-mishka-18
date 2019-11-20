@@ -4,7 +4,6 @@
 
 .catalogues__link {
   display: block;
-  width: 100%;
 
   @include text (19px, 24px);
   color: $color-text-catalogues;
@@ -18,9 +17,17 @@
   background-color: $color-ctlgs-ts-bg;
 }
 
+@media (max-width: $mobile-width-only) {
+  .catalogues__link {
+    width: 320px;
+    margin-left: -30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .catalogues__list {
-    outline: 1px solid black;
     width: 100%;
     display: flex;
   }
@@ -30,6 +37,8 @@
   }
 
   .catalogues__link {
+    width: 100%;
+
     @include text (20px, 30px);
   }
 }
