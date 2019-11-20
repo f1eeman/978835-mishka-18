@@ -3,6 +3,9 @@
 }
 
 .catalogues__link {
+  display: block;
+  width: 100%;
+
   @include text (19px, 24px);
   color: $color-text-catalogues;
 }
@@ -13,4 +16,20 @@
 
 .catalogues__link--toys {
   background-color: $color-ctlgs-ts-bg;
+}
+
+@media (min-width: $tablet-width) {
+  .catalogues__list {
+    outline: 1px solid black;
+    width: 100%;
+    display: flex;
+  }
+
+  .catalogues__item {
+    flex-grow: 1;
+  }
+
+  .catalogues__link {
+    @include text (20px, 30px);
+  }
 }

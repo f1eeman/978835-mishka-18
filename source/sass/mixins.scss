@@ -15,3 +15,18 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin mobile-view($mobile-width: 320px, $mobile-padding: 0 30px,) {
+  width: $mobile-width;
+  padding: $mobile-padding;
+}
+
+@mixin tablet-view($mobile-width: 768px, $mobile-padding: 0 50px,) {
+  width: $mobile-width;
+  padding: $mobile-padding;
+}
+
+@mixin desktop-view($mobile-width: 1150px, $mobile-padding: 0 50px,) {
+  width: $mobile-width;
+  padding: $mobile-padding;
+}

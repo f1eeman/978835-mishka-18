@@ -1,8 +1,10 @@
-.page-header__container {
-  position: relative;
-
+.page-header {
   border-top: 1px solid $color-border-ph;
   border-bottom: 1px solid $color-border-ph;
+}
+
+.page-header__container {
+  position: relative;
 }
 
 .page-header__logo-box {
@@ -28,5 +30,28 @@
 
   &:active {
     opacity: $opacity-down;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__container  {
+    min-height: 88px;
+  }
+
+  .page-header__logo-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    min-height: auto;
+    margin-left: -43px;
+    margin-top: -17px;
   }
 }

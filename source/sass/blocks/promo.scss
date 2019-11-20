@@ -1,0 +1,16 @@
+.promo__title {
+  @include text(27px, 30px);
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .promo__title {
+    @include text(43px, 50px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo__title {
+    @include text(53px, 57px);
+  }
+}

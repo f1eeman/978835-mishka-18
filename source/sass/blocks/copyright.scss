@@ -1,4 +1,9 @@
 .copyright__logo {
+  width: 27px;
+  height: 34px;
+
+  vertical-align: middle;
+
   fill: $color-html-ac-bg;
 }
 
@@ -19,4 +24,9 @@
   &:active .copyright__logo {
     fill: $color-html-ac-bg-active;
   }
+}
+
+.copyright__text {
+
+  margin-right: 30px;
 }

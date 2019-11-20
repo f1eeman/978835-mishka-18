@@ -1,5 +1,17 @@
 .container {
-  width: 320px;
+  @include mobile-view();
+
   margin: 0 auto;
-  padding: 0 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    @include tablet-view();
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    @include desktop-view();
+  }
 }
