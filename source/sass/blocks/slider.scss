@@ -1,3 +1,11 @@
 .slider__button {
   cursor: pointer;
 }
+
+@media (min-width: $tablet-width) {
+  .slider__buttons-box {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}

@@ -1,5 +1,12 @@
 .social__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 141px;
+
   @include list-reset();
+
+  margin: 0 auto;
 }
 
 .social__icon {
@@ -13,4 +20,19 @@
   &:active {
     fill: $color-social-bg-active;
   }
+}
+
+.social__icon-instagram {
+  width: 22px;
+  height: 21px;
+}
+
+.social__icon-facebook {
+  width: 15px;
+  height: 28px;
+}
+
+.social__icon-twitter {
+  width: 24px;
+  height: 20px;
 }

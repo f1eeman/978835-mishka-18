@@ -7,3 +7,38 @@
 
   color: $secondary-color-text;
 }
+
+.production-process__video-box {
+  width: 260px;
+  height: 150px;
+}
+
+@media (min-width: $tablet-width) {
+  .production-process__container {
+    position: relative;
+
+    padding-top: 455px;
+  }
+
+  .production-process__video-box {
+    position: absolute;
+    top: 0;
+    left: 50px;
+
+    width: 668px;
+    height: 455px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .production-process__container {
+    padding-top: 0;
+    padding-left: 682px;
+    min-height: 455px;
+  }
+
+  .production-process__video-box {
+    width: 682px;
+    height: 455px;
+  }
+}

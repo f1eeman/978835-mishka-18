@@ -4,8 +4,26 @@
   margin: 0;
   padding: 0;
   padding-left: 46px;
+}
 
-  outline: 2px solid yellow;
+.seach-form__loupe-icon {
+  position: absolute;
+  left: 0;
+  top: 4px;
+
+  width: 18px;
+  height: 18px;
+}
+
+.seach-form__label {
+  &:hover .seach-form__loupe-icon-path,
+  &:focus .seach-form__loupe-icon-path {
+    fill: $color-loupe-icon-bg-hover;
+  }
+
+  &:active .seach-form__loupe-icon-path {
+    fill: $color-loupe-icon-bg-active;
+  }
 }
 
 .seach-form__control {

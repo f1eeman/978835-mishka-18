@@ -1,7 +1,30 @@
 .page-main__title {
+  min-height: 177px;
+  margin: 0;
+  margin-bottom: 30px;
+  padding-top: 80px;
+
   @include text(27px, 30px);
+  text-align: center;
+
+
+  background-color: $color-h1-bg;
 }
 
-.page-main__title--catalog-page {
-  background-color: $colot-h1-ctlg-bg;
+@media (min-width: $tablet-width) {
+  .page-main__title {
+    min-height: 226px;
+    padding-top: 105px;
+
+    @include text(43px, 50px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__title {
+    min-height: 255px;
+    padding-top: 103px;
+
+    @include text(53px, 57px);
+  }
 }

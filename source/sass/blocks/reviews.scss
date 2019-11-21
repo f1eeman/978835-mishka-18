@@ -25,7 +25,43 @@
 }
 
 .reviews__author-account {
+  display: block;
+
   @include text(15px, 30px, 400);
   font-style: normal;
   color: $secondary-color-text;
+}
+
+@media (min-width: $tablet-width) {
+  .reviews__wrapper {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .reviews__title {
+    @include text(43px, 50px);
+    order: -2;
+  }
+
+  .reviews__text {
+    @include text(17px, 30px, 400);
+  }
+
+  .reviews__write {
+    order: -1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews__wrapper {
+    margin-left: 175px;
+  }
+
+  .reviews__title {
+    @include text(53px, 57px);
+  }
 }

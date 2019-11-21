@@ -1,3 +1,20 @@
 .catalog__list {
   @include list-reset();
 }
+
+@media (min-width: $tablet-width) {
+  .catalog {
+    margin-bottom: 53px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    margin-bottom: 57px;
+  }
+
+  .catalog__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}

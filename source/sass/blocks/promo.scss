@@ -1,0 +1,31 @@
+.promo {
+  background-color: $color-promo-bg;
+  background-image: url("../img/hero-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+
+  // временно
+  outline: 1px solid goldenrod;
+  min-height: 489px;
+  display: flex;
+  flex-direction: column;
+}
+
+.promo__title {
+  @include text(27px, 30px);
+  text-align: center;
+  // временно
+  margin-bottom: auto;
+}
+
+@media (min-width: $tablet-width) {
+  .promo__title {
+    @include text(43px, 50px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo__title {
+    @include text(53px, 57px);
+  }
+}

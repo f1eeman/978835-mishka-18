@@ -3,14 +3,44 @@
 }
 
 .catalogues__link {
+  display: block;
+
   @include text (19px, 24px);
   color: $color-text-catalogues;
 }
 
-.catalogues__link--interior {
+.catalogues__item--interior {
   background-color: $color-ctlgs-intr-bg;
 }
 
-.catalogues__link--toys {
+.catalogues__item--toys {
   background-color: $color-ctlgs-ts-bg;
+}
+
+@media (min-width: $tablet-width) {
+  .catalogues__list {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+  }
+
+  .catalogues__item .container {
+    width: auto;
+    padding: 0;
+  }
+
+  .catalogues__item {
+    flex-grow: 1;
+  }
+
+  .catalogues__link {
+    @include text (20px, 30px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalogues__list {
+    width: 1150px;
+  }
 }

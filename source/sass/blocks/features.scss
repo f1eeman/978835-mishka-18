@@ -3,9 +3,59 @@
 }
 
 .features__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
   @include list-reset();
 }
 
 .features__item {
   @include text(17px, 20px);
+}
+
+@media (min-width: $tablet-width) {
+  .features__title {
+    @include text(43px, 50px);
+  }
+
+  .features__list {
+    flex-direction: row;
+  }
+
+  .features__item {
+    width: 300px;
+
+    @include text(20px, 22px);
+  }
+
+  .features__item--handmade {
+    order: 1;
+  }
+
+  .features__item--nordic-style {
+    order: 2;
+  }
+
+  .features__item--domestic-production {
+    order: 3;
+  }
+
+  .features__item--likes {
+    order: 4;
+  }
+
+  .features__item--gift-wrap {
+    order: 5;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features__title {
+    @include text(53px, 57px);
+  }
+
+  .features__wrap {
+    margin-left: 175px;
+  }
 }
