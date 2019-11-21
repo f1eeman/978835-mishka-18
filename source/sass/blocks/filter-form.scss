@@ -4,7 +4,8 @@
   border: none;
 }
 
-.filter-form__legend {
+.filter-form__title {
+  margin: 0;
   padding: 0;
 
   @include text(17px, 16px);
@@ -125,7 +126,7 @@
     margin-right: 26px;
   }
 
-  .filter-form__legend {
+  .filter-form__title {
     width: 167px;
   }
 
@@ -153,7 +154,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .filter-form__legend {
+  .filter-form__title {
     width: 175px;
 
     text-align: center;
