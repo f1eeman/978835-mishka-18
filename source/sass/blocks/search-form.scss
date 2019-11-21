@@ -1,4 +1,4 @@
-.seach-form__wrap {
+.search-form__wrap {
   position: relative;
 
   margin: 0;
@@ -6,7 +6,7 @@
   padding-left: 46px;
 }
 
-.seach-form__loupe-icon {
+.search-form__loupe-icon {
   position: absolute;
   left: 0;
   top: 4px;
@@ -15,18 +15,18 @@
   height: 18px;
 }
 
-.seach-form__label {
-  &:hover .seach-form__loupe-icon-path,
-  &:focus .seach-form__loupe-icon-path {
+.search-form__label {
+  &:hover .search-form__loupe-icon-path,
+  &:focus .search-form__loupe-icon-path {
     fill: $color-loupe-icon-bg-hover;
   }
 
-  &:active .seach-form__loupe-icon-path {
+  &:active .search-form__loupe-icon-path {
     fill: $color-loupe-icon-bg-active;
   }
 }
 
-.seach-form__control {
+.search-form__control {
   width: 90%;
   border: none;
 

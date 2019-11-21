@@ -12,7 +12,7 @@
   <body>
     <header class="page-header">
       <div class="page-header__container container">
-        <nav class="page-header__main-nav main-nav">
+        <nav class="page-header__main-nav main-nav main-nav--opened main-nav--nojs">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -31,15 +31,15 @@
           </ul>
           <ul class="main-nav__list user-list">
             <li class="user-list__item user-list__item--padding-zero user-list__item--border-third">
-              <form class="user-list__seach-form seach-form" action="https://echo.htmlacademy.ru" method="GET">
-                <p class="seach-form__wrap">
-                  <label class="seach-form__label" for="seach-input">
+              <form class="user-list__search-form search-form" action="https://echo.htmlacademy.ru" method="GET">
+                <p class="search-form__wrap">
+                  <label class="search-form__label" for="search-input">
                     <span class="visually-hidden">Поиск по сайту</span>
-                    <svg class="seach-form__loupe-icon" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewbox="-1 -1 18 18">
-                      <path class="seach-form__loupe-icon-path" fill="#d3d2d2" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
+                    <svg class="search-form__loupe-icon" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewbox="-1 -1 18 18">
+                      <path class="search-form__loupe-icon-path" fill="#d3d2d2" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
                     </svg>
                   </label>
-                  <input class="seach-form__control seach-form__control--seach" id="seach-input" name="seach" type="seach" placeholder="Поиск по сайту" value="">
+                  <input class="search-form__control search-form__control--search" id="search-input" name="search" type="search" placeholder="Поиск по сайту">
                 </p>
               </form>
             </li>
@@ -194,5 +194,6 @@
         <button class="form-cart__add-to-cart" type="submit">Добавить</button>
       </form>
     </section>
+    <script src="js/main-nav.js"></script>
   </body>
 </html>
