@@ -1,10 +1,13 @@
 .filter-form__fieldset {
+  margin: 0;
+  padding: 0;
   border: none;
 }
 
 .filter-form__legend {
-  @include text(17px, 16px);
+  padding: 0;
 
+  @include text(17px, 16px);
   color: $color-text-legend;
   text-transform: uppercase;
 }
@@ -17,6 +20,18 @@
   @include text(17px, 18px);
 
   cursor: pointer;
+}
+
+.filter-form__control--text {
+  width: 100%;
+}
+
+.filter-form__control--tel {
+  width: 100%;
+}
+
+.filter-form__control--email {
+  width: 100%;
 }
 
 .filter-form__control {
@@ -42,6 +57,7 @@
 }
 
 .filter-form__control--textarea {
+  width: 100%;
   padding: 15px;
   border: 2px solid $color-border-form-filter;
 
@@ -67,4 +83,98 @@
   font: inherit;
 
   background-color: transparent;
+}
+
+@media (min-width: $tablet-width) {
+  .filter-form__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .filter-form__container--last {
+    justify-content: space-between;
+  }
+
+  .filter-form__fieldset--gray-bg {
+    background-color: $color-fieldset-gray-bg;
+  }
+
+  .filter-form__control--gray-bg {
+    background-color: $color-fieldset-gray-bg;
+  }
+
+  .filter-form__label {
+    @include text(19px, 18px);
+  }
+
+  .filter-form__control {
+    &::placeholder {
+      @include text(19px, 18px, 400);
+    }
+  }
+
+  .filter-form__reference {
+    @include text(17px, 30px, 400);
+  }
+
+  .filter-form__item--by-initials {
+    display: flex;
+  }
+
+  .filter-form__label--text {
+    margin-right: 26px;
+  }
+
+  .filter-form__legend {
+    width: 167px;
+  }
+
+  .filter-form__list {
+    flex-grow: 1;
+  }
+
+  .filter-form__wrap {
+    flex-grow: 1;
+  }
+
+  .filter-form__list--by-color {
+    width: 501px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .filter-form__item--by-color {
+    width: 50%;
+  }
+
+  .filter-form__button {
+    order: -1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter-form__legend {
+    width: 175px;
+
+    text-align: center;
+  }
+
+  .filter-form__item--by-color {
+    width: 33%;
+  }
+
+  .filter-form__container--last {
+    width: 700px;
+    padding: 0;
+  }
+
+  .filter-form__list {
+    width: 700px;
+    flex-grow: 0;
+  }
+
+  .filter-form__wrap {
+    width: 700px;
+    flex-grow: 0;
+  }
 }
