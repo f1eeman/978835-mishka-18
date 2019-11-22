@@ -1,37 +1,92 @@
+.popular-item {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 6px;
+
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-position: -6px 0;
+    background-size: contain;
+  }
+}
+
 .popular-item__wrap {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-top: 25px;
 }
 
 .popular-item__title {
+  margin: 0;
+  margin-bottom: 7px;
+
   @include text(25px, 30px);
 }
 
 .popular-item__special-offer {
+  margin-bottom: 22px;
+
   color: $color-text-spec-off;
   text-transform: uppercase;
 }
 
 .popular-item__description {
-  @include text (15px, 24px, 400);
+  margin: 0;
+  margin-bottom: 16px;
 
+  @include text (15px, 24px, 400);
   color: $secondary-color-text;
 }
 
 .popular-item__characteristics-list {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+
   @include text (15px, 20px, 400);
 
   color: $secondary-color-text;
 }
 
+.popular-item__row {
+  border-bottom: 1px solid $color-border-table;
+}
+
+.popular-item__cell {
+  padding: 10px 0;
+}
+
+.popular-item__cell--property {
+  width: 98px;
+
+  text-align: left;
+}
+
 .popular-item__image-box {
   width: 260px;
   height: 315px;
+  margin-bottom: 27px;
 }
 
 .popular-item__price {
+  align-self: center;
+  margin-bottom: 26px;
+
   color: $secondary-color-text;
+}
+
+.popular-item__to-order {
+  width: 260px;
+  margin-bottom: 38px;
 }
 
 @media (min-width: $tablet-width) {

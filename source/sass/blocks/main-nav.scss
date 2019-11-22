@@ -1,3 +1,7 @@
+.main-nav {
+  position: relative;
+}
+
 .main-nav__logo-box {
   display: flex;
   justify-content: center;
@@ -28,7 +32,7 @@
   position: absolute;
   top: 27px;
   left: auto;
-  right: 30px;
+  right: 0;
 
   width: 23px;
   height: 23px;

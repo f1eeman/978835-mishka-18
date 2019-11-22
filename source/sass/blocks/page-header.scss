@@ -1,9 +1,19 @@
 .page-header {
+  position: relative;
+
   border-top: 1px solid $color-border-ph;
   border-bottom: 1px solid $color-border-ph;
 }
 
-.page-header__container {
+@media (max-width: $mobile-width-only) {
+  .page-header__container {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.container-s {
   position: relative;
 }
 

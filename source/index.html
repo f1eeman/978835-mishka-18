@@ -10,27 +10,29 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header page-header--lines">
       <div class="page-header__container container">
         <nav class="page-header__main-nav main-nav main-nav--opened main-nav--nojs">
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
+          <p class="container-s container">
+            <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+          </p>
           <p class="main-nav__logo-box">
             <a class="main-nav__logo">
               <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин ручных работ для дома «Мишка»">
             </a>
           </p>
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--border-first">
+            <li class="site-list__item">
               <a class="site-list__link" href="catalog.html">Каталог товаров</a>
             </li>
-            <li class="site-list__item site-list__item--border-second">
+            <li class="site-list__item">
               <a class="site-list__link" href="form.html">Вязание на заказ</a>
             </li>
           </ul>
           <ul class="main-nav__list user-list">
-            <li class="user-list__item user-list__item--padding-zero user-list__item--border-third">
+            <li class="user-list__item user-list__item--padding-zero">
               <form class="user-list__search-form search-form" action="https://echo.htmlacademy.ru" method="GET">
                 <p class="search-form__wrap">
                   <label class="search-form__label" for="search-input">
@@ -43,7 +45,7 @@
                 </p>
               </form>
             </li>
-            <li class="user-list__item user-list__item--padding-zero user-list__item--border-fourth">
+            <li class="user-list__item user-list__item--padding-zero">
               <a class="user-list__link-cart" href="#">
                 <svg class="user-list__cart-icon" xmlns="http://www.w3.org/2000/svg" width="20px" height="19px" viewbox="264 371 20 19">
                   <path class="user-list__cart-icon-path" fill="#d3d2d2" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"/>
@@ -63,14 +65,24 @@
             <h2 class="catalogues__title visually-hidden">Список каталогов</h2>
             <ul class="catalogues__list">
               <li class="catalogues__item catalogues__item--interior">
-                <p class="catalogues__container container">
-                  <a class="catalogues__link catalogues__link--interior" href="#">Предметы интерьера</a>
-                </p>
+                <a class="catalogues__link catalogues__link--interior catalogues__link--container container" href="#">
+                  Предметы<br>интерьера
+                  <svg class="catalogues__icon catalogues__icon--interior" xmlns="http://www.w3.org/2000/svg" width="41px" height="63px" viewbox="-260 -20 41 63">
+                    <path d="M-244.227,18.283c-0.286,0.966-0.245,2.191,0.027,3.639c0.494,2.635,1.687,6.041,2.358,9.67h5.062 c0.696-3.641,1.949-7.05,2.471-9.683c0.287-1.445,0.33-2.66,0.041-3.617c-0.275-0.899-0.89-1.618-2.021-2.303h-5.997 C-243.361,16.668-243.96,17.38-244.227,18.283z"/>
+                    <path d="M-232.395,38.278h-13.799c-1.293,0-2.299,0.976-2.299,2.229v2.229h2.299h13.799h2.299v-2.229 C-230.096,39.254-231.102,38.278-232.395,38.278z"/>
+                    <path d="M-225.262-17.446h-11.732c0-1.244-1.015-2.229-2.3-2.229c-1.283,0-2.3,0.985-2.3,2.229h-11.737l-6.073,25.517 c0.794-0.461,1.589-0.992,2.632-0.992c1.359,0,2.243,0.818,2.924,1.375c0.682,0.557,1.162,0.849,1.447,0.849 c0.292,0.001,0.769-0.287,1.451-0.836c0.681-0.548,1.564-1.358,2.915-1.358c1.349,0,2.237,0.806,2.919,1.354 c0.684,0.549,1.161,0.84,1.451,0.84c0.146,0,0.338-0.073,0.58-0.214c0.242-0.141,0.53-0.353,0.872-0.626 c0.512-0.411,1.139-0.967,1.99-1.218c0.284-0.085,0.593-0.136,0.93-0.136c1.347,0,2.238,0.805,2.92,1.354 c0.683,0.548,1.159,0.84,1.451,0.84c0.287-0.002,0.766-0.296,1.445-0.85c0.684-0.554,1.571-1.367,2.925-1.367 c1.356,0,2.239,0.817,2.919,1.371c0.342,0.276,0.631,0.489,0.872,0.631c0.24,0.143,0.431,0.214,0.575,0.214 c0.288,0,0.762-0.293,1.442-0.854c0.68-0.559,1.567-1.384,2.929-1.384c1.044,0,1.839,0.533,2.632,0.997L-225.262-17.446z"/>
+                    <path d="M-235.881,33.82h-6.864c-0.657,0-1.15,0.479-1.15,1.115c0,0.635,0.493,1.113,1.15,1.113h6.9c0.655,0,1.15-0.479,1.15-1.113 c0-0.636-0.495-1.115-1.15-1.115H-235.881z"/>
+                    <path d="M-239.295,9.336c-0.146,0-0.338,0.074-0.58,0.213c-0.157,0.094-0.37,0.261-0.57,0.41v3.731h2.299V9.959 C-238.651,9.581-239.054,9.336-239.295,9.336z"/>
+                  </svg>
+                </a>
               </li>
               <li class="catalogues__item catalogues__item--toys">
-                <p class="catalogues__container container">
-                  <a class="catalogues__link catalogues__link--toys" href="#">Детские игрушки</a>
-                </p>
+                <a class="catalogues__link catalogues__link--toys catalogues__link--container container" href="#">
+                  Детские<br>игрушки
+                  <svg class="catalogues__icon catalogues__icon--toy" xmlns="http://www.w3.org/2000/svg" width="60px" height="60px" viewbox="226 226 60 60">
+                    <path d="M226.001,269.871l27.438,15.934v-23.346l-27.438-15.94V269.871z M277.347,238.627v2.453 c0,1.817-3.458,3.29-7.73,3.29c-4.266,0-7.727-1.473-7.727-3.29v-4.059h0.024c0.26,1.714,3.604,3.073,7.702,3.073 c4.272,0,7.729-1.474,7.729-3.285c0-1.819-3.457-3.289-7.729-3.289c-0.339,0-0.675,0.01-1.002,0.03l-4.975-2.888v3.086 c0,1.817-3.454,3.29-7.723,3.29c-2.683,0-5.045-0.583-6.433-1.467c-0.196-0.203-0.439-0.401-0.732-0.586 c-0.363-0.381-0.565-0.797-0.565-1.236v-2.986l-4.807,2.792c-0.347-0.017-0.696-0.033-1.054-0.033c-4.267,0-7.727,1.469-7.727,3.289 c0,1.811,3.46,3.285,7.727,3.285c4.099,0,7.446-1.358,7.705-3.073h0.022v4.059c0,1.817-3.455,3.29-7.727,3.29 c-4.267,0-7.727-1.473-7.727-3.29v-2.42l-5.952,3.452l27.531,15.986l27.351-15.882L277.347,238.627z M263.703,248.793 c0,1.817-3.46,3.287-7.727,3.287c-4.269,0-7.729-1.47-7.729-3.287v-4.059h0.024c0.26,1.715,3.603,3.076,7.705,3.076 c4.101,0,7.443-1.361,7.705-3.076h0.021V248.793L263.703,248.793z M258.558,262.666v23.144L286,269.871v-23.144L258.558,262.666z  M255.917,232.762c4.269,0,7.723-1.47,7.723-3.286c0-1.814-3.454-3.287-7.723-3.287c-4.27,0-7.729,1.472-7.729,3.287 C248.187,231.292,251.647,232.762,255.917,232.762"/>
+                  </svg>
+                </a>
               </li>
             </ul>
           </section>
@@ -83,17 +95,17 @@
             <span class="popular-item__special-offer">Товар недели</span>
             <p class="popular-item__description">Экологически чистая пряжа, <br> ручная работа. Доступны в шести расцветках, и трех размерах</p>
             <table class="popular-item__characteristics-list">
-              <tr>
-                <td class="popular-item__property">Цвет:</td>
-                <td class="popular-item__value">«Тиффани»/серый</td>
+              <tr class="popular-item__row">
+                <td class="popular-item__cell popular-item__cell--property">Цвет:</td>
+                <td class="popular-item__cell popular-item__cell--value">«Тиффани»/серый</td>
               </tr>
-              <tr>
-                <td class="popular-item__property">Диаметр:</td>
-                <td class="popular-item__value">25 см</td>
+              <tr class="popular-item__row">
+                <td class="popular-item__cell popular-item__cell--property">Диаметр:</td>
+                <td class="popular-item__cell popular-item__cell--value">25 см</td>
               </tr>
-              <tr>
-                <td class="popular-item__property">Высота:</td>
-                <td class="popular-item__value">15 см</td>
+              <tr class="popular-item__row">
+                <td class="popular-item__cell popular-item__cell--property">Высота:</td>
+                <td class="popular-item__cell popular-item__cell--value">15 см</td>
               </tr>
             </table>
             <p class="popular-item__image-box">
@@ -109,12 +121,12 @@
           <div class="features__wrap">
             <h2 class="features__title">Коротко о нас:</h2>
             <ul class="features__list">
-              <li class="features__item features__item--eco-material">Экологически чистые материалы</li>
-              <li class="features__item features__item--nordic-style">Скандинавский стиль по российской цене</li>
-              <li class="features__item features__item--likes">Увеличивает лайки на фотографиях</li>
-              <li class="features__item features__item--handmade">Связано вручную с любовью и умилением</li>
+              <li class="features__item features__item--eco-material">Экологически <br> чистые материалы</li>
+              <li class="features__item features__item--nordic-style">Скандинавский стиль <br> по российской цене</li>
+              <li class="features__item features__item--likes">Увеличивает лайки <br> на фотографиях</li>
+              <li class="features__item features__item--handmade">Связано вручную с <br> любовью и умилением</li>
               <li class="features__item features__item--domestic-production">Поддержка отечественного производителя</li>
-              <li class="features__item features__item--gift-wrap">Поставляется в подарочной упаковке</li>
+              <li class="features__item features__item--gift-wrap">Поставляется в <br> подарочной упаковке</li>
             </ul>
           </div>
         </div>
@@ -253,5 +265,6 @@
       </form>
     </section>
     <script src="js/main-nav.js"></script>
+    <script src="js/page-header-lines.js"></script>
   </body>
 </html>

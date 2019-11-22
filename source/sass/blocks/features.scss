@@ -1,4 +1,11 @@
+.features__wrap {
+  padding-top: 32px;
+}
+
 .features__title {
+  margin: 0;
+  margin-bottom: 27px;
+
   @include text(25px, 30px);
 }
 
@@ -11,7 +18,88 @@
 }
 
 .features__item {
+  position: relative;
+
+  min-height: 125px;
+  padding-top: 53px;
+
   @include text(17px, 20px);
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+.features__item--eco-material {
+  &::before {
+    left: 6px;
+
+    width: 32px;
+    height: 37px;
+
+    background-image: url("../img/icon-feature-flower.svg");
+  }
+}
+
+.features__item--nordic-style {
+  &::before {
+    left: 0;
+
+    width: 47px;
+    height: 27px;
+
+    background-image: url("../img/icon-feature-money.svg");
+  }
+}
+
+.features__item--likes {
+  &::before {
+    left: 7px;
+
+    width: 34px;
+    height: 27px;
+
+    background-image: url("../img/icon-feature-heart.svg");
+  }
+}
+
+.features__item--handmade {
+  &::before {
+    left: 3px;
+
+    width: 35px;
+    height: 34px;
+
+    background-image: url("../img/icon-feature-ball.svg");
+  }
+}
+
+.features__item--domestic-production {
+  &::before {
+    left: -5px;
+
+    width: 55px;
+    height: 23px;
+
+    background-image: url("../img/icon-feature-rocket.svg");
+  }
+}
+
+.features__item--gift-wrap {
+  &::before {
+    left: 3px;
+
+    width: 33px;
+    height: 32px;
+
+    background-image: url("../img/icon-feature-gift.svg");
+  }
 }
 
 @media (min-width: $tablet-width) {
