@@ -1,4 +1,11 @@
+.contacts__wrap {
+  padding-top: 33px;
+}
+
 .contacts__title {
+  margin: 0;
+  margin-bottom: 25px;
+
   @include text(18px, 30px);
 }
 
@@ -6,30 +13,26 @@
   width: 322px;
   height: 457px;
   margin-left: -30px;
+  margin-bottom: 37px;
 }
 
 .contacts__list {
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 9px;
 
   @include text(15px, 30px, 400);
   color: $secondary-color-text;
 }
 
-.contacts__tbody {
-  margin: 0;
+.contacts__tcell {
   padding: 0;
-}
-
-.contacts__tbody tr {
-  margin: 0;
-  padding: 0;
-}
-
-.contacts__tbody td {
-  margin: 0;
-  padding: 0;
+  padding-bottom: 29px;
   vertical-align: top;
+}
+
+.contacts__type {
+  width: 78px;
 }
 
 .contacts__email {
@@ -50,6 +53,13 @@
 
     color: $color-text-mail-active;
   }
+}
+
+.contacts__write-to-us {
+  display: block;
+  margin-bottom: 39px;
+
+  @include text(18px, 20px);
 }
 
 @media (min-width: $tablet-width) {

@@ -1,26 +1,11 @@
-.page-header {
-  position: relative;
-
-  border-top: 1px solid $color-border-ph;
-  border-bottom: 1px solid $color-border-ph;
-}
-
 @media (max-width: $mobile-width-only) {
+  .page-header {
+    border-top: 1px solid $color-border-ph;
+  }
+
   .page-header__container {
     width: auto;
     margin: 0;
     padding: 0;
-  }
-}
-
-.container-s {
-  position: relative;
-}
-
-@media (min-width: $tablet-width) {
-  .page-header__container {
-    display: flex;
-    flex-wrap: wrap;
-    min-height: 89px;
   }
 }

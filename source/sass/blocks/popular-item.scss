@@ -1,28 +1,12 @@
 .popular-item {
-  position: relative;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    height: 6px;
-
-    background-image: url("../img/bg-zigzag-line.svg");
-    background-repeat: repeat-x;
-    background-position: -6px 0;
-    background-size: contain;
-  }
+  @include zg-line(6px, -6px, contain);
 }
 
 .popular-item__wrap {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-top: 25px;
+  padding-top: 28px;
 }
 
 .popular-item__title {
@@ -74,13 +58,14 @@
 .popular-item__image-box {
   width: 260px;
   height: 315px;
-  margin-bottom: 27px;
+  margin-bottom: 24px;
 }
 
 .popular-item__price {
   align-self: center;
   margin-bottom: 26px;
 
+  @include text(17px, 24px);
   color: $secondary-color-text;
 }
 

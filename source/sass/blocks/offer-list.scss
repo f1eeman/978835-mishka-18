@@ -1,0 +1,19 @@
+.offer-list {
+  display: none;
+
+  @include list-reset();
+}
+
+.offer-list__link {
+  @include text(15px, 24px);
+  color: $main-color-text;
+
+  &[href]:hover,
+  &[href]:focus {
+    color: $main-color-text-opacity-hover;
+  }
+
+  &[href]:active {
+    color: $main-color-text-opacity-down;
+  }
+}

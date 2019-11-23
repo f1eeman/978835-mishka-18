@@ -1,9 +1,20 @@
+.reviews {
+  padding-bottom: 50px;
+
+  @include zg-line(6px, -6px, contain);
+}
+
 .reviews__title {
+  margin: 0;
+  margin-bottom: 25px;
+
   @include text(25px, 30px);
 }
 
 .reviews__list {
   @include list-reset();
+
+  margin-bottom: 30px;
 }
 
 .reviews__quotation {
@@ -13,6 +24,7 @@
 
 .reviews__text {
   margin: 0;
+  margin-bottom: 29px;
   padding: 0;
 
   @include text(15px, 30px, 400);
@@ -27,9 +39,15 @@
 .reviews__author-account {
   display: block;
 
-  @include text(15px, 30px, 400);
+  @include text(17px, 35px, 400);
   font-style: normal;
   color: $secondary-color-text;
+}
+
+.reviews__write {
+  display: block;
+
+  @include text(18px,20px);
 }
 
 @media (min-width: $tablet-width) {

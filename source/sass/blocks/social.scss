@@ -1,7 +1,14 @@
+.social {
+  padding-top: 22px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid $color-border-social;
+}
+
 .social__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-end;
   width: 141px;
 
   @include list-reset();
