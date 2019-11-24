@@ -1,15 +1,14 @@
 .main-nav__logo-box {
-  display: flex;
-  justify-content: center;
-  min-height: 79px;
   margin: 0;
-  padding: 0;
+  padding-top: 21px;
+  padding-bottom: 19px;
   border-bottom: 1px solid $color-border-ph;
+
+  text-align: center;
 }
 
 .main-nav__logo {
-  display: block;
-  align-self: center;
+  display: inline-block;
   width: 86px;
   height: 35px;
 }
@@ -82,10 +81,13 @@
 .main-nav__delivery-info {
   margin: 0;
   margin-left: auto;
+  padding-top: 18px;
 
   @include text(15px, 24px, 400);
 
   color: $secondary-color-text;
+
+  background-color: $color-promo-bg;
 }
 
 @media (max-width: $mobile-width-only) {
@@ -118,17 +120,25 @@
   }
 
   .main-nav {
+    position: relative;
+
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+
+    z-index: 10000;
+  }
+  //временно из-за логотипа
+  .main-nav__logo {
+    width: 112px;
+    height: 46px;
+    outline: 2px solid violet;
   }
 
   .main-nav__logo-box {
     width: 320px;
-    min-height: 79px;
-    justify-content: flex-start;
     border-right: 1px solid $color-border-ph;
-    border-bottom: none;
+
+    text-align: left;
   }
 
   .main-nav__list--user-list {

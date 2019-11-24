@@ -19,14 +19,16 @@
 
 @media (max-width: $mobile-width-only) {
   .site-list__item {
-    padding-top: 27px;
+    padding-top: 26px;
     padding-bottom: 28px;
     border-bottom: 1px solid $color-border-ph;
   }
 
-  .site-list__link--container {
-    display: block;
+  .site-list__link-container {
+    width: 320px;
     padding-left: 76px;
+    padding-right: 30px;
+    margin: 0 auto;
   }
 }
 
@@ -38,7 +40,7 @@
     @include text(15px, 24px);
   }
 
-  .site-list__link--container {
+  .site-list__link-container {
     width: auto;
     margin: 0;
     padding: 0;
@@ -46,6 +48,9 @@
 
   .site-list__item {
     width: 167px;
+    padding-top: 18px;
+
+    background-color: $color-promo-bg;
   }
 }
 

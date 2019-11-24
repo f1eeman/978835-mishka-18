@@ -107,8 +107,17 @@
 }
 
 @media (min-width: $tablet-width) {
+  .features {
+    margin-bottom: 31px;
+  }
+
+  .features__wrap {
+    padding-top: 48px;
+  }
+
   .features__title {
     @include text(43px, 50px);
+    margin-bottom: 50px;
   }
 
   .features__list {
@@ -116,7 +125,8 @@
   }
 
   .features__item {
-    width: 300px;
+    width: 50%;
+    margin-bottom: 28px;
 
     @include text(20px, 22px);
   }

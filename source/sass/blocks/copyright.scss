@@ -1,6 +1,8 @@
-.copyright {
-  padding-top: 21px;
-  padding-bottom: 23px;
+@media (max-width: $mobile-width-only) {
+  .copyright {
+    padding-top: 21px;
+    padding-bottom: 23px;
+  }
 }
 
 .copyright__logo {

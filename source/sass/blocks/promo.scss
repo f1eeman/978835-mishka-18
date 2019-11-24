@@ -1,5 +1,5 @@
 .promo {
-  padding-top: 70px;
+  padding-top: 72px;
 
   background-color: $color-promo-bg;
   background-image: url("../img/hero-mobile@1x.jpg");
@@ -8,19 +8,54 @@
 }
 
 .promo__title {
-  width: 260px;
-  margin-top: 0;
-  margin-bottom: 122px;
-  margin-left: auto;
-  margin-right: auto;
-
-  @include text(27px, 30px);
   text-align: center;
-  // временно
+}
+
+@media (max-width: $mobile-width-only) {
+  .promo__title {
+    width: 260px;
+    margin-top: 0;
+    margin-bottom: 122px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include text(27px, 30px);
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .promo {
+    position: relative;
+
+    padding-top: 113px;
+
+    background-image: url("../img/hero-tablet@1x.jpg");
+    background-position: 50% -40px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -10px;
+      z-index: 1000;
+
+      height: 22px;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-position: 0 0;
+      background-size: auto 22px;
+    }
+
+    z-index: 10000;
+  }
+
   .promo__title {
+    margin: 0;
+    margin-bottom: 373px;
+
     @include text(43px, 50px);
   }
 }

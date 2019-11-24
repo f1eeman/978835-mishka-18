@@ -59,7 +59,19 @@
 @media (min-width: $tablet-width) {
   .slider__buttons-box {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 2px;
+    bottom: 20px;
+
+    width: 171px;
+    margin: 0;
+  }
+
+  .slider__button {
+    position: relative;
+
+    width: 50%;
+    height: 52px;
+    padding: 0;
+    border: none;
   }
 }

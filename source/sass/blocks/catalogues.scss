@@ -101,27 +101,38 @@
   }
 }
 
-// @media (min-width: $tablet-width) {
-//   .catalogues__list {
-//     width: 768px;
-//     margin: 0 auto;
-//     padding: 0 50px;
-//     display: flex;
-//   }
+@media (min-width: $tablet-width) {
+  .catalogues__list {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+  }
 
-//   .catalogues__link--container {
-//     width: auto;
-//     padding: 0;
-//   }
+  .catalogues__link--container {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
 
-//   .catalogues__item {
-//     flex-grow: 1;
-//   }
+  .catalogues__link {
+    width: 334px;
+    padding-top: 29px;
+    padding-left: 36px;
+    padding-bottom: 30px;
 
-//   .catalogues__link {
-//     @include text (20px, 30px);
-//   }
-// }
+    @include text (20px, 30px);
+  }
+
+  .catalogues__icon--interior {
+    top: 30px;
+  }
+
+  .catalogues__icon--toy {
+    top: 31px;
+    right: 33px;
+  }
+}
 
 // @media (min-width: $desktop-width) {
 //   .catalogues__list {

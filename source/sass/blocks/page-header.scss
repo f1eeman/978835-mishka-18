@@ -9,3 +9,26 @@
     padding: 0;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    position: relative;
+    z-index: 10000;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 86px;
+      left: 0;
+      right: 0;
+
+      height: 200px;
+      border-top: 1px solid $color-border-ph;
+
+      background-color: $color-promo-bg;
+
+      z-index: 1;
+    }
+  }
+}
