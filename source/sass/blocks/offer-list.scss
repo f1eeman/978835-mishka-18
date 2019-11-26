@@ -1,19 +1,26 @@
-.offer-list {
-  display: none;
+@media (min-width: $desktop-width) {
+  .offer-list {
+    display: flex;
 
-  @include list-reset();
-}
-
-.offer-list__link {
-  @include text(15px, 24px);
-  color: $main-color-text;
-
-  &[href]:hover,
-  &[href]:focus {
-    color: $main-color-text-opacity-hover;
+    @include list-reset();
   }
 
-  &[href]:active {
-    color: $main-color-text-opacity-down;
+  .offer-list__item {
+    width: 220px;
+    padding-top: 18px;
+  }
+
+  .offer-list__link {
+    @include text(15px, 24px);
+    color: $main-color-text;
+
+    &[href]:hover,
+    &[href]:focus {
+      color: $main-color-text-opacity-hover;
+    }
+
+    &[href]:active {
+      color: $main-color-text-opacity-down;
+    }
   }
 }

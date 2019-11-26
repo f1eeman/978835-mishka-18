@@ -115,8 +115,12 @@
     padding: 0;
   }
 
+  .catalogues__item {
+    width: 50%;
+  }
+
   .catalogues__link {
-    width: 334px;
+    width: 100%;
     padding-top: 29px;
     padding-left: 36px;
     padding-bottom: 30px;
@@ -134,8 +138,9 @@
   }
 }
 
-// @media (min-width: $desktop-width) {
-//   .catalogues__list {
-//     width: 1150px;
-//   }
-// }
+@media (min-width: $desktop-width) {
+  .catalogues__list {
+    width: 1150px;
+    padding: 0 50px;
+  }
+}

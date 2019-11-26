@@ -1,3 +1,7 @@
+.main-nav__list--offer-list {
+  display: none;
+}
+
 .main-nav__logo-box {
   margin: 0;
   padding-top: 21px;
@@ -135,9 +139,6 @@
   }
 
   .main-nav__logo-box {
-    width: 320px;
-    border-right: 1px solid $color-border-ph;
-
     text-align: left;
   }
 
@@ -154,13 +155,30 @@
   }
 }
 
-// @media (min-width: $desktop-width) {
-//   .main-nav {
-//     width: 100%;
-//     justify-content: space-between;
-//   }
+@media (min-width: $desktop-width) {
+  .main-nav__list--site-list {
+    order: -1;
+  }
 
-//   .main-nav__logo-box {
-//     order: 1;
-//   }
-// }
+  .main-nav__list--user-list {
+    margin-left: auto;
+  }
+
+  .main-nav__list--offer-list {
+    display: block;
+    order: 3;
+  }
+
+  .main-nav__logo-box {
+    margin-left: 65px;
+    padding-top: 9px;
+    padding-bottom: 5px;
+  }
+  //временно из-за логотипа
+  .main-nav__logo {
+    width: 149px;
+    height: 72px;
+
+    outline: 2px solid rgb(22, 216, 174);
+  }
+}

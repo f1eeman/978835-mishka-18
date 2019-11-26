@@ -1,5 +1,5 @@
 .popular-item {
-  @include zg-line(6px, -6px);
+  @include zg-line(6px, -6px, auto, 6px);
 }
 
 .popular-item__wrap {
@@ -76,7 +76,7 @@
 
 @media (min-width: $tablet-width) {
   .popular-item {
-    @include zg-line(15px, -18px);
+    @include zg-line(15px, -24px, auto, 15px);
   }
 
   .popular-item__wrap {
@@ -141,30 +141,56 @@
 }
 
 @media (min-width: $desktop-width) {
+  .popular-item {
+    &::after {
+      display: none;
+    }
+  }
+
+  .popular-item__container {
+    @include zg-line(23px, -27px, 1050px, auto, 50px, 50px);
+  }
+
   .popular-item__wrap {
+    padding-top: 122px;
     margin-left: 175px;
   }
 
   .popular-item__title {
+    position: relative;
+
     @include text(53px, 57px);
+
+    z-index: 1000;
   }
 
   .popular-item__special-offer {
-    top: 40px;
-    left: 48px;
+    top: 138px;
+    left: 91px;
   }
 
   .popular-item__description {
     width: 285px;
+    margin-bottom: 45px;
   }
 
   .popular-item__characteristics-list {
     width: 291px;
+    margin-bottom: 110px;
   }
 
   .popular-item__image-box {
     position: absolute;
-    top: 75px;
+    top: 55px;
     right: 50px;
+
+    width: 525px;
+    height: 636px;
+
+    z-index: 1;
+  }
+
+  .popular-item__to-order {
+    margin-bottom: 96px;
   }
 }

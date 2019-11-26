@@ -49,13 +49,25 @@
   .site-list__item {
     width: 167px;
     padding-top: 18px;
-
-    background-color: $color-promo-bg;
   }
 }
 
-// @media (min-width: $desktop-width) {
-//   .site-list {
-//     order: 0;
-//   }
-// }
+@media (min-width: $desktop-width) {
+  .site-list {
+    @include text(17px, 24px);
+  }
+
+  .site-list__item {
+    width: 184px;
+    padding-top: 33px;
+  }
+
+  .site-list__item:first-child {
+    border-right: 1px solid $color-border-ph;
+  }
+
+  .site-list__item:nth-child(2) {
+    width: 200px;
+    padding-left: 35px;
+  }
+}

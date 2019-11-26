@@ -46,7 +46,7 @@
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: repeat-x;
       background-position: 0 0;
-      background-size: auto 22px;
+      background-size: 768px auto;
     }
 
     z-index: 10000;
@@ -61,7 +61,20 @@
 }
 
 @media (min-width: $desktop-width) {
+  .promo {
+    &::after {
+      bottom: -15px;
+
+      height: 34px;
+
+      background-position: -20px 0;
+      background-size: 1150px auto;
+    }
+  }
+
   .promo__title {
+    margin-bottom: 360px;
+
     @include text(53px, 57px);
   }
 }

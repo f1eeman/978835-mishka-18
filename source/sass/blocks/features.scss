@@ -153,11 +153,20 @@
 }
 
 @media (min-width: $desktop-width) {
+  .features {
+    margin-bottom: 37px;
+  }
+
+  .features__wrap {
+    padding-top: 59px;
+    margin-left: 175px;
+  }
+
   .features__title {
     @include text(53px, 57px);
   }
 
-  .features__wrap {
-    margin-left: 175px;
+  .features__item {
+    width: 350px;
   }
 }

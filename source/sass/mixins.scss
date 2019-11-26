@@ -9,23 +9,23 @@
   font-weight: $font-weight;
 }
 
-@mixin zg-line($height, $x-positon) {
+@mixin zg-line($height, $x-positon, $size-x: auto, $size-y: auto, $left: 0, $right: 0) {
   position: relative;
 
   &::after {
     content: "";
 
     position: absolute;
-    left: 0;
+    left: $left;
     bottom: 0;
-    right: 0;
+    right: $right;
 
     height: $height;
 
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
     background-position: $x-positon 0;
-    background-size: auto $height;
+    background-size: $size-x $size-y;
   }
 }
 
