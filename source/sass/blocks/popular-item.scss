@@ -76,7 +76,8 @@
 
 @media (min-width: $tablet-width) {
   .popular-item {
-    @include zg-line(15px, -24px, auto, 15px);
+    @include zg-line(15px, -24px, 101%);
+    z-index: 1000;
   }
 
   .popular-item__wrap {

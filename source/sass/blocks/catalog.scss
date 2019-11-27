@@ -13,13 +13,13 @@
 }
 
 @media (min-width: $desktop-width) {
-  // .catalog {
-  //   margin-bottom: 57px;
-  // }
-
   .catalog__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .catalog__item {
+    margin-bottom: 57px;
   }
 }

@@ -119,6 +119,9 @@
 
 @media (min-width: $tablet-width) {
   .features {
+    position: relative;
+
+    z-index: 10;
     margin-bottom: 31px;
   }
 
