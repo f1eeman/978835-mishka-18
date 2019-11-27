@@ -10,7 +10,7 @@
 
 .reviews__title {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 
   @include text(25px, 30px);
 }
@@ -18,7 +18,7 @@
 .reviews__list {
   @include list-reset();
 
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 }
 
 .reviews__quotation {
@@ -37,7 +37,7 @@
 }
 
 .reviews__author {
-  @include text(18px, 24px);
+  @include text(17px, 24px);
   font-style: normal;
 }
 
@@ -65,7 +65,7 @@
 
   .reviews__container {
     min-height: 457px;
-    padding-top: 79px;
+    padding-top: 78px;
 
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
@@ -81,7 +81,7 @@
   }
 
   .reviews__title {
-    margin-bottom: 50px;
+    margin-bottom: 49px;
 
     @include text(43px, 50px);
 
@@ -92,6 +92,11 @@
     margin-bottom: 57px;
 
     @include text(17px, 30px, 400);
+  }
+
+  .reviews__author {
+    @include text(18px, 24px);
+    font-style: normal;
   }
 
   .reviews__write {
@@ -134,7 +139,16 @@
     margin-bottom: 37px;
   }
 
+  .reviews__author {
+    @include text(17px, 24px);
+    font-style: normal;
+  }
+
   .reviews__br {
     display: inline;
+  }
+
+  .reviews__write {
+    margin-top: 9px;
   }
 }

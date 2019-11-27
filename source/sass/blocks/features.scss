@@ -1,5 +1,5 @@
 .features {
-  margin-bottom: 18px;
+  margin-bottom: 17px;
 }
 
 .features__wrap {
@@ -8,7 +8,7 @@
 
 .features__title {
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 29px;
 
   @include text(25px, 30px);
 }
@@ -25,7 +25,7 @@
   position: relative;
 
   min-height: 125px;
-  padding-top: 53px;
+  padding-top: 55px;
 
   @include text(17px, 20px);
 
@@ -42,7 +42,7 @@
 
 .features__item--eco-material {
   &::before {
-    left: 6px;
+    left: 8px;
 
     width: 32px;
     height: 37px;
@@ -63,8 +63,11 @@
 }
 
 .features__item--likes {
+  padding-top: 53px;
+
   &::before {
     left: 7px;
+    top: 2px;
 
     width: 34px;
     height: 27px;
@@ -74,6 +77,8 @@
 }
 
 .features__item--handmade {
+  padding-top: 51px;
+
   &::before {
     left: 3px;
 
@@ -85,7 +90,10 @@
 }
 
 .features__item--domestic-production {
+  padding-top: 49px;
+
   &::before {
+    top: -2px;
     left: -5px;
 
     width: 55px;
@@ -96,7 +104,10 @@
 }
 
 .features__item--gift-wrap {
+  padding-top: 47px;
+
   &::before {
+    top: -5px;
     left: 3px;
 
     width: 33px;
@@ -112,7 +123,7 @@
   }
 
   .features__wrap {
-    padding-top: 48px;
+    padding-top: 50px;
   }
 
   .features__title {
@@ -140,15 +151,31 @@
   }
 
   .features__item--domestic-production {
+    padding-top: 55px;
     order: 3;
+
+    &::before {
+      top: 5px;
+    }
   }
 
   .features__item--likes {
+    padding-top: 56px;
+
     order: 4;
+
+    &::before {
+      top: 7px;
+    }
   }
 
   .features__item--gift-wrap {
+    padding-top: 56px;
     order: 5;
+
+    &::before {
+      top: 5px;
+    }
   }
 }
 
