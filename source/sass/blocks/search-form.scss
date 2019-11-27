@@ -8,14 +8,21 @@
 
 .search-form__loupe-icon {
   position: absolute;
+  top: 0;
   left: 0;
-  top: 4px;
 
   width: 18px;
   height: 18px;
 }
 
 .search-form__label {
+  position: absolute;
+  left: 0;
+  top: 5px;
+
+  width: 18px;
+  height: 18px;
+
   &:hover .search-form__loupe-icon-path,
   &:focus .search-form__loupe-icon-path {
     fill: $color-loupe-icon-bg-hover;
@@ -27,10 +34,12 @@
 }
 
 .search-form__control {
-  width: 90%;
+  width: 100%;
   border: none;
 
   font: inherit;
+
+  @include text(17px,24px);
 
   background-color: transparent;
 
@@ -45,5 +54,33 @@
 
   &:active::placeholder {
     color: $main-color-text-opacity-down;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .search-form--container {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .search-form__control {
+    display: none;
+  }
+
+  .search-form__wrap {
+    width: 21px;
+    height: 21px;
+    margin-left: 32px;
+
+    padding: 0;
+  }
+
+  .search-form__label {
+    left: 50%;
+    top: 50%;
+
+    margin-left: -9px;
+    margin-top: -9px;
   }
 }

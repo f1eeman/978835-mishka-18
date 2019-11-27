@@ -1,4 +1,22 @@
+.product__wrap {
+  padding-top: 26px;
+  padding-left: 28px;
+  border: 1px solid $color-border-price;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px 0 rgba($color: #000000, $alpha: 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba($color: #000000, $alpha: 0.1);
+  }
+}
+
 .product__title {
+  display: block;
+  margin-bottom: 5px;
+
   @include text(17px, 24px);
 
   color: $main-color-text;
@@ -13,17 +31,15 @@
   }
 }
 
-.product__image-box {
-  margin: 0;
-  padding: 0;
-
+.product__link--image {
+  display: block;
   width: 260px;
   height: 195px;
 }
 
 .product__description {
   margin: 0;
-  padding: 0;
+  margin-bottom: 18px;
 
   @include text(13px, 30px, 400);
 
@@ -31,53 +47,90 @@
 }
 
 .product__price {
+  display: flex;
+  justify-content: space-between;
+  width: 204px;
   margin: 0;
-  padding: 0;
+  padding-top: 21px;
+  padding-bottom: 28px;
+  border-top: 1px solid $color-border-price;
 }
 
 .product__price-content {
   @include text(15px, 24px);
 }
 
+.product__add-to-catd {
+  &:hover .product__cart-icon-path,
+  &:focus .product__cart-icon-path {
+    fill: $color-cart-icon-bg-hover;
+  }
+
+  &:active .product__cart-icon-path {
+    fill: $color-cart-icon-bg-active;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .product {
-    position: relative;
+    display: flex;
+    width: 100%;
+  }
 
+  .product__title {
+    @include text(20px, 24px);
+  }
+
+  //временно из-за изображения
+  .product__link--image {
+    width: 334px;
+    height: 334px;
+    outline: 1px solid red;
+  }
+
+  .product__wrap {
     display: flex;
     flex-direction: column;
-    min-height: 334px;
-    margin-bottom: 54px;
-    padding-left: 334px;
+
+    flex-grow: 1;
   }
 
   .product__description {
     margin-bottom: auto;
+
+    @include text(15px, 30px, 400);
   }
 
-  .product__image-box {
-    position: absolute;
-    top: 0;
-    left: 0;
+  .product__price {
+    width: 88%;
+    padding-top: 22px;
+    padding-bottom: 24px;
 
-    width: 334px;
-    height: 334px;
+    @include text(17px, 24px);
+  }
+
+  .product__price-content {
+    @include text(17px, 24px);
   }
 }
 
 @media (min-width: $desktop-width) {
   .product {
+    display: block;
     width: 316px;
-    min-height: auto;
-    margin-bottom: auto;
-    padding-top: 462px;
-    padding-left: 0;
   }
 
-  .product__image-box {
-    top: 0;
-    left: 0;
+  .product__wrap {
+    display: flex;
+    min-height: 197px;
+    flex-direction: column;
 
+    flex-grow: 0;
+  }
+  //временно из-за изображения
+  .product__link--image {
     width: 316px;
     height: 462px;
+    outline: 1px solid red;
   }
 }

@@ -2,19 +2,24 @@
   @include list-reset();
 }
 
+.catalog__item {
+  margin-bottom: 30px;
+}
+
 @media (min-width: $tablet-width) {
-  .catalog {
-    margin-bottom: 53px;
+  .catalog__item {
+    margin-bottom: 54px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .catalog {
-    margin-bottom: 57px;
-  }
+  // .catalog {
+  //   margin-bottom: 57px;
+  // }
 
   .catalog__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 }

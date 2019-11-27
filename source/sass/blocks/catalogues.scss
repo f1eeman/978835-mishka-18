@@ -2,19 +2,103 @@
   @include list-reset ();
 }
 
-.catalogues__link {
-  display: block;
-
-  @include text (19px, 24px);
-  color: $color-text-catalogues;
-}
-
 .catalogues__item--interior {
   background-color: $color-ctlgs-intr-bg;
 }
 
 .catalogues__item--toys {
-  background-color: $color-ctlgs-ts-bg;
+  background-color: $color-ctlgs-toy-bg;
+}
+
+.catalogues__link {
+  position: relative;
+
+  display: block;
+  min-height: 103px;
+  padding-top: 24px;
+  padding-bottom: 28px;
+
+  @include text (19px, 24px);
+  color: $color-text-catalogues;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+
+    display: none;
+    height: 5px;
+  }
+
+  &:hover,
+  &:focus {
+    transform: translateY(-5px);
+  }
+
+  &:hover .catalogues__icon,
+  &:focus .catalogues__icon {
+    fill-opacity: 0.7;
+  }
+
+  &:active {
+    color: $color-text-catalogues-active;
+  }
+
+  &:active .catalogues__icon {
+    fill-opacity: 0.3;
+  }
+
+  &:hover::after,
+  &:focus::after,
+  &:active::after {
+    display: block;
+  }
+}
+
+.catalogues__icon {
+  position: absolute;
+
+  fill: $color-ctlgs-icon-bg;
+  fill-opacity: 0.5;
+}
+
+.catalogues__icon--interior {
+  top: 22px;
+  right: 36px;
+
+  width: 41px;
+  height: 63px;
+}
+
+.catalogues__icon--toy {
+  top: 20px;
+  right: 28px;
+
+  width: 60px;
+  height: 60px;
+}
+
+.catalogues__link--interior {
+  &::after {
+    background-color: $color-ctlgs-intr-bg-hover;
+  }
+
+  &:hover {
+    background-color: $color-ctlgs-intr-bg-hover;
+  }
+}
+
+.catalogues__link--toys {
+  &::after {
+    background-color: $color-ctlgs-toy-bg-hover;
+  }
+
+  &:hover {
+    background-color: $color-ctlgs-toy-bg-hover;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -25,22 +109,38 @@
     display: flex;
   }
 
-  .catalogues__container {
+  .catalogues__link--container {
     width: auto;
+    margin: 0;
     padding: 0;
   }
 
   .catalogues__item {
-    flex-grow: 1;
+    width: 50%;
   }
 
   .catalogues__link {
+    width: 100%;
+    padding-top: 29px;
+    padding-left: 36px;
+    padding-bottom: 30px;
+
     @include text (20px, 30px);
+  }
+
+  .catalogues__icon--interior {
+    top: 30px;
+  }
+
+  .catalogues__icon--toy {
+    top: 31px;
+    right: 33px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .catalogues__list {
     width: 1150px;
+    padding: 0 50px;
   }
 }

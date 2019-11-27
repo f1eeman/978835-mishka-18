@@ -1,9 +1,24 @@
+.reviews__br {
+  display: none;
+}
+
+.reviews {
+  padding-bottom: 50px;
+
+  @include zg-line(6px, -6px, auto, 6px);
+}
+
 .reviews__title {
+  margin: 0;
+  margin-bottom: 23px;
+
   @include text(25px, 30px);
 }
 
 .reviews__list {
   @include list-reset();
+
+  margin-bottom: 31px;
 }
 
 .reviews__quotation {
@@ -13,6 +28,7 @@
 
 .reviews__text {
   margin: 0;
+  margin-bottom: 27px;
   padding: 0;
 
   @include text(15px, 30px, 400);
@@ -21,47 +37,118 @@
 }
 
 .reviews__author {
+  @include text(17px, 24px);
   font-style: normal;
 }
 
 .reviews__author-account {
   display: block;
+  width: 165px;
 
-  @include text(15px, 30px, 400);
+  @include text(17px, 30px, 400);
   font-style: normal;
   color: $secondary-color-text;
 }
 
+.reviews__write {
+  display: block;
+
+  @include text(18px,20px);
+}
+
 @media (min-width: $tablet-width) {
+  .reviews {
+    padding-bottom: 85px;
+
+    @include zg-line(15px, -18px, auto, 15px);
+  }
+
+  .reviews__container {
+    min-height: 457px;
+    padding-top: 78px;
+
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
   .reviews__wrapper {
     position: relative;
 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
   }
 
   .reviews__title {
+    margin-bottom: 49px;
+
     @include text(43px, 50px);
+
     order: -2;
   }
 
   .reviews__text {
+    margin-bottom: 57px;
+
     @include text(17px, 30px, 400);
   }
 
+  .reviews__author {
+    @include text(18px, 24px);
+    font-style: normal;
+  }
+
   .reviews__write {
+    min-width: 175px;
+
+    @include text(17px, 20px);
+
     order: -1;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .reviews {
+    padding-bottom: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .reviews__container {
+    padding-top: 71px;
+    padding-bottom: 159px;
+
+    background-position: 50px 0;
+
+    @include zg-line(23px, -27px, 1050px, auto, 50px, 50px);
+  }
+
   .reviews__wrapper {
     margin-left: 175px;
   }
 
   .reviews__title {
     @include text(53px, 57px);
+  }
+
+  .reviews__text {
+    width: 770px;
+    margin-bottom: 37px;
+  }
+
+  .reviews__author {
+    @include text(17px, 24px);
+    font-style: normal;
+  }
+
+  .reviews__br {
+    display: inline;
+  }
+
+  .reviews__write {
+    margin-top: 9px;
   }
 }

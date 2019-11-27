@@ -9,7 +9,26 @@
   font-weight: $font-weight;
 }
 
-// Сброс маргинов, паддингов, маркеров для <ul>
+@mixin zg-line($height, $x-positon, $size-x: auto, $size-y: auto, $left: 0, $right: 0) {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: $left;
+    bottom: 0;
+    right: $right;
+
+    height: $height;
+
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-position: $x-positon 0;
+    background-size: $size-x $size-y;
+  }
+}
+
 @mixin list-reset() {
   margin: 0;
   padding: 0;

@@ -1,14 +1,18 @@
+.main-nav__list--offer-list {
+  display: none;
+}
+
 .main-nav__logo-box {
-  display: flex;
-  justify-content: center;
-  min-height: 79px;
   margin: 0;
-  padding: 0;
+  padding-top: 21px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid $color-border-ph;
+
+  text-align: center;
 }
 
 .main-nav__logo {
-  display: block;
-  align-self: center;
+  display: inline-block;
   width: 86px;
   height: 35px;
 }
@@ -28,7 +32,7 @@
   position: absolute;
   top: 27px;
   left: auto;
-  right: 30px;
+  right: 0;
 
   width: 23px;
   height: 23px;
@@ -78,35 +82,101 @@
   }
 }
 
+.main-nav__delivery-info {
+  margin: 0;
+  margin-left: auto;
+  padding-top: 18px;
+
+  @include text(15px, 24px, 400);
+
+  color: $secondary-color-text;
+}
+
 @media (max-width: $mobile-width-only) {
-  .main-nav--no-js .main-nav__toggle {
+  .main-nav--closed .main-nav__list--site-list {
+    display: none;
+  }
+
+  .main-nav--closed .main-nav__list--user-list {
+    display: none;
+  }
+
+  .main-nav__toggle-box {
+    position: relative;
+    width: 260px;
+    margin: 0 auto;
+  }
+
+  .main-nav--no-js .main-nav__toggle-box {
+    display: none;
+  }
+
+  .main-nav__delivery-info {
     display: none;
   }
 }
 
 @media (min-width: $tablet-width) {
-  .main-nav__toggle {
+  .main-nav__toggle-box {
     display: none;
   }
 
   .main-nav {
+    position: relative;
+
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+
+    z-index: 10000;
+  }
+  //временно из-за логотипа
+  .main-nav__logo {
+    width: 112px;
+    height: 46px;
+    outline: 2px solid violet;
   }
 
   .main-nav__logo-box {
-    min-height: auto;
+    text-align: left;
+  }
+
+  .main-nav__list--user-list {
+    order: 1;
+  }
+
+  .main-nav__list--site-list {
+    order: 2;
+  }
+
+  .main-nav__delivery-info {
+    order: 3;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .main-nav {
-    width: 100%;
-    justify-content: space-between;
+  .main-nav__list--site-list {
+    order: -1;
+  }
+
+  .main-nav__list--user-list {
+    margin-left: auto;
+  }
+
+  .main-nav__list--offer-list {
+    display: block;
+    order: 3;
   }
 
   .main-nav__logo-box {
-    order: 1;
+    margin-left: 65px;
+    padding-top: 9px;
+    padding-bottom: 5px;
+  }
+  //временно из-за логотипа
+  .main-nav__logo {
+    width: 149px;
+    height: 72px;
+
+    outline: 2px solid rgb(22, 216, 174);
   }
 }

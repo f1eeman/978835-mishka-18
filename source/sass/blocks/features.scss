@@ -1,4 +1,15 @@
+.features {
+  margin-bottom: 17px;
+}
+
+.features__wrap {
+  padding-top: 30px;
+}
+
 .features__title {
+  margin: 0;
+  margin-bottom: 29px;
+
   @include text(25px, 30px);
 }
 
@@ -11,12 +22,113 @@
 }
 
 .features__item {
+  position: relative;
+
+  min-height: 125px;
+  padding-top: 55px;
+
   @include text(17px, 20px);
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+.features__item--eco-material {
+  &::before {
+    left: 8px;
+
+    width: 32px;
+    height: 37px;
+
+    background-image: url("../img/icon-feature-flower.svg");
+  }
+}
+
+.features__item--nordic-style {
+  &::before {
+    left: 0;
+
+    width: 47px;
+    height: 27px;
+
+    background-image: url("../img/icon-feature-money.svg");
+  }
+}
+
+.features__item--likes {
+  padding-top: 53px;
+
+  &::before {
+    left: 7px;
+    top: 2px;
+
+    width: 34px;
+    height: 27px;
+
+    background-image: url("../img/icon-feature-heart.svg");
+  }
+}
+
+.features__item--handmade {
+  padding-top: 51px;
+
+  &::before {
+    left: 3px;
+
+    width: 35px;
+    height: 34px;
+
+    background-image: url("../img/icon-feature-ball.svg");
+  }
+}
+
+.features__item--domestic-production {
+  padding-top: 49px;
+
+  &::before {
+    top: -2px;
+    left: -5px;
+
+    width: 55px;
+    height: 23px;
+
+    background-image: url("../img/icon-feature-rocket.svg");
+  }
+}
+
+.features__item--gift-wrap {
+  padding-top: 47px;
+
+  &::before {
+    top: -5px;
+    left: 3px;
+
+    width: 33px;
+    height: 32px;
+
+    background-image: url("../img/icon-feature-gift.svg");
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .features {
+    margin-bottom: 31px;
+  }
+
+  .features__wrap {
+    padding-top: 50px;
+  }
+
   .features__title {
     @include text(43px, 50px);
+    margin-bottom: 50px;
   }
 
   .features__list {
@@ -24,7 +136,8 @@
   }
 
   .features__item {
-    width: 300px;
+    width: 50%;
+    margin-bottom: 28px;
 
     @include text(20px, 22px);
   }
@@ -38,24 +151,49 @@
   }
 
   .features__item--domestic-production {
+    padding-top: 55px;
     order: 3;
+
+    &::before {
+      top: 5px;
+    }
   }
 
   .features__item--likes {
+    padding-top: 56px;
+
     order: 4;
+
+    &::before {
+      top: 7px;
+    }
   }
 
   .features__item--gift-wrap {
+    padding-top: 56px;
     order: 5;
+
+    &::before {
+      top: 5px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
+  .features {
+    margin-bottom: 37px;
+  }
+
+  .features__wrap {
+    padding-top: 59px;
+    margin-left: 175px;
+  }
+
   .features__title {
     @include text(53px, 57px);
   }
 
-  .features__wrap {
-    margin-left: 175px;
+  .features__item {
+    width: 350px;
   }
 }
