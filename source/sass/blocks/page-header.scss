@@ -23,12 +23,18 @@
       left: 0;
       right: 0;
 
-      height: 200px;
+      height: 150px;
       border-top: 1px solid $color-border-ph;
 
       background-color: $color-promo-bg;
 
       z-index: 1;
+    }
+  }
+
+  .page-header--gray-bg {
+    &::after {
+      background-color: $color-h1-bg;
     }
   }
 }
