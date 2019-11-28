@@ -1,20 +1,103 @@
+.filter-form__container--reference {
+  margin-bottom: 57px;
+}
+
 .filter-form__fieldset {
   margin: 0;
+  margin-bottom: 30px;
   padding: 0;
   border: none;
 }
 
+.filter-form__fieldset--by-color {
+  margin-bottom: 9px;
+}
+
+.filter-form__fieldset--initials {
+  margin-bottom: 9px;
+}
+
+.filter-form__fieldset--additional-info {
+  margin-bottom: 13px;
+}
+
 .filter-form__title {
   margin: 0;
-  padding: 0;
+  margin-bottom: 26px;
 
   @include text(17px, 16px);
   color: $color-text-legend;
   text-transform: uppercase;
 }
 
+.filter-form__title--color {
+  margin-bottom: 27px;
+}
+
+.filter-form__title--initials {
+  margin-bottom: 29px;
+}
+
+.filter-form__title--contacts {
+  margin-bottom: 22px;
+}
+
+.filter-form__wrap {
+  margin: 0;
+}
+
+@media (max-width: $mobile-width-only) {
+  .filter-form__title {
+    position: relative;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: auto;
+
+      width: 198px;
+      height: 1px;
+
+      background-color: $color-legend-bg;
+    }
+  }
+
+  .filter-form__title--email {
+    &::after {
+      width: 179px;
+    }
+  }
+}
+
 .filter-form__list {
   @include list-reset();
+}
+
+.filter-form__item--by-type {
+  min-height: 50px;
+  padding-left: 62px;
+}
+
+.filter-form__item--interior {
+  padding-top: 8px;
+}
+
+.filter-form__item--toy {
+  padding-top: 18px;
+}
+
+.filter-form__item--by-color {
+  min-height: 43px;
+  padding-top: 10px;
+  padding-left: 62px;
+  margin-bottom: 18px;
+}
+
+.filter-form__item--by-initials {
+  margin-bottom: 22px;
 }
 
 .filter-form__label {
@@ -23,20 +106,93 @@
   cursor: pointer;
 }
 
-.filter-form__control--text {
-  width: 100%;
+.filter-form__label--radio {
+  position: relative;
+
+  display: block;
+
+  user-select: none;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -8px;
+    left: -62px;
+
+    width: 38px;
+    height: 38px;
+    border: 2px solid $color-label-bg;
+
+    border-radius: 50%;
+  }
 }
 
-.filter-form__control--tel {
-  width: 100%;
+.filter-form__control--radio:checked + .filter-form__label--radio {
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 4px;
+    left: -50px;
+
+    width: 15px;
+    height: 15px;
+
+    background-color: $color-radio-checked-bg;
+    border-radius: 50%;
+  }
 }
 
-.filter-form__control--email {
+.filter-form__label--checkbox {
+  position: relative;
+
+  display: block;
+
+  user-select: none;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -11px;
+    left: -62px;
+
+    width: 40px;
+    height: 39px;
+    border: 2px solid $color-label-bg;
+  }
+}
+
+.filter-form__control--checkbox:checked + .filter-form__label--checkbox {
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -53px;
+
+    width: 21px;
+    height: 11px;
+
+    border: 2px solid $color-checkbox-checked-bg;
+    border-top-style: none;
+    border-right-style: none;
+    transform: rotate(-45deg);
+  }
+}
+
+.filter-form__label--text {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.filter-form__control--user-data {
   width: 100%;
 }
 
 .filter-form__control {
-  padding-bottom: 13px;
+  padding-bottom: 15px;
   border: none;
   border-bottom: 2px solid $color-border-form-filter;
 
@@ -57,8 +213,21 @@
   }
 }
 
+.filter-form__control--tel {
+  padding-right: 45px;
+
+  &::placeholder {
+    @include text(19px, 18px, 400);
+  }
+}
+
+.filter-form__control--email {
+  padding-right: 45px;
+}
+
 .filter-form__control--textarea {
   width: 100%;
+  min-height: 142px;
   padding: 15px;
   border: 2px solid $color-border-form-filter;
 
@@ -73,13 +242,16 @@
 }
 
 .filter-form__reference {
+  margin: 0;
+  margin-bottom: 30px;
+
   @include text(14px, 16px, 400);
 
   color: $secondary-color-text;
 }
 
 .filter-form__button {
-  border: none;
+  width: 260px;
 
   font: inherit;
 
@@ -92,7 +264,7 @@
     flex-wrap: wrap;
   }
 
-  .filter-form__container--last {
+  .filter-form__container--reference {
     justify-content: space-between;
   }
 
@@ -164,7 +336,7 @@
     width: 33%;
   }
 
-  .filter-form__container--last {
+  .filter-form__container--reference {
     width: 700px;
     padding: 0;
   }
