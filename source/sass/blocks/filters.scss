@@ -11,12 +11,22 @@
 }
 
 @media (min-width: $tablet-width) {
+  .filters__container {
+    padding-top: 62px;
+    margin-bottom: 55px;
+  }
+
   .filters__info {
     @include text(17px, 30px, 400);
   }
 }
 
 @media (min-width: $desktop-width) {
+  .filters__container {
+    padding-top: 120px;
+    margin-bottom: 55px;
+  }
+
   .filters__info {
     margin-left: 175px;
     margin-right: 175px;
