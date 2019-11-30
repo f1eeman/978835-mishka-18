@@ -10,7 +10,7 @@
 }
 
 .form-cart__control--radio:checked + .form-cart__label {
-  border-color: $color-border-modal-label;
+  border-color: $color-border-modal-label-active;
 }
 
 .form-cart__label {
@@ -19,11 +19,15 @@
   min-height: 52px;
   padding-top: 17px;
   padding-bottom: 10px;
-  border: 2px solid $color-btn-border;
+  border: 2px solid $color-border-modal-label;
 
   @include text(17px, 16px);
 
   cursor: pointer;
+
+  &:hover {
+    border-color: $color-border-modal-label-hover;
+  }
 }
 
 .form-cart__add-to-cart {
