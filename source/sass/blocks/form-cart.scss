@@ -1,8 +1,34 @@
+.form-cart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-cart__wrap {
+  margin: 0;
+  margin-bottom: 31px;
+}
+
+.form-cart__control--radio:checked + .form-cart__label {
+  border-color: $color-border-modal-label;
+}
+
 .form-cart__label {
+  display: block;
+  width: 82px;
+  min-height: 52px;
+  padding-top: 17px;
+  padding-bottom: 10px;
+  border: 2px solid $color-btn-border;
+
   @include text(17px, 16px);
+
+  cursor: pointer;
 }
 
 .form-cart__add-to-cart {
+  width: 100%;
+  min-height: 52px;
   border: none;
 
   font: inherit;
@@ -13,4 +39,27 @@
 
   background-color: $color-btn-cart-bg;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $color-btn-cart-bg-hover;
+  }
+
+  &:active {
+    color: $color-text-btn-active;
+  }
+}
+
+
+@media (max-width: $mobile-width-only) {
+  .form-cart {
+    width: 260px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form-cart__label {
+    width: 112px;
+  }
 }
