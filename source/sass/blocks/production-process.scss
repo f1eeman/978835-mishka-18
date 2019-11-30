@@ -1,44 +1,208 @@
 .production-process__title {
+  position: relative;
+
+  margin: 0;
+  padding-top: 24px;
+  padding-left: 88px;
+  padding-bottom: 24px;
+  border: 1px solid $color-border-production-process;
+
   @include text (17px, 24px);
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 30px;
+    left: 32px;
+
+    width: 32px;
+    height: 32px;
+
+    background-image: url("../img/icon-video.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+.production-process__wrap {
+  padding-top: 13px;
+  padding-left: 33px;
+  padding-right: 34px;
+  padding-bottom: 33px;
+  border: 1px solid $color-border-production-process;
+  border-top: none;
+}
+
+.production-process__box-hover {
+  margin-bottom: 58px;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px 0 rgba($color: #000000, $alpha: 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba($color: #000000, $alpha: 0.1);
+  }
 }
 
 .production-process__info {
+  margin-bottom: 24px;
+
   @include text (13px, 24px, 400);
 
   color: $secondary-color-text;
 }
 
+.production-process__make-order {
+  display: block;
+}
+
 .production-process__video-box {
+  position: relative;
+
   width: 260px;
   height: 150px;
+
+  background-color: $color-production-bg;
+  background-image: url("../img/video-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+
+.production-process__play {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 101px;
+  height: 77px;
+  margin-left: -50px;
+  margin-top: -38px;
+  border: none;
+
+  background-color: transparent;
+  background-image: url("../img/icon-play.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+
+  cursor: pointer;
+
+  transition-duration: 0.05s;
+  transition-timing-function: linear;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
-  .production-process__container {
+  .production-process__box-hover {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 63px;
+  }
+
+  .production-process__wrap {
+    padding-left: 38px;
+    padding-right: 41px;
+    padding-bottom: 45px;
+  }
+
+  .production-process__title {
+    padding-top: 37px;
+    padding-left: 105px;
+    padding-bottom: 10px;
+    border-bottom: none;
+
+    @include text (20px, 24px);
+
+    &::before {
+      top: 33px;
+      left: 40px;
+    }
+  }
+
+  .production-process__info {
+    margin-top: 0;
+    margin-bottom: 35px;
+    padding-top: 10px;
+
+    @include text (15px, 30px, 400);
+  }
+
+  .production-process__make-order {
+    margin-left: 2px;
+  }
+
+  .production-process__video-box {
+    width: 668px;
+    height: 455px;
+
+    background-position: -5px 0;
+
+    order: -1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .production-process__box-hover {
     position: relative;
 
-    padding-top: 455px;
+    min-height: 455px;
+    align-items: flex-end;
+    margin-bottom: 105px;
   }
 
   .production-process__video-box {
     position: absolute;
     top: 0;
-    left: 50px;
+    left: 0;
 
-    width: 668px;
-    height: 455px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .production-process__container {
-    padding-top: 0;
-    padding-left: 682px;
-    min-height: 455px;
-  }
-
-  .production-process__video-box {
     width: 682px;
-    height: 455px;
+
+    background-position: 0 0;
+  }
+
+  .production-process__title {
+    width: 370px;
+    flex-shrink: 0;
+    padding-top: 97px;
+    padding-left: 79px;
+    padding-right: 140px;
+
+    &::before {
+      top: 42px;
+      left: 80px;
+    }
+  }
+
+  .production-process__wrap {
+    width: 370px;
+    flex-shrink: 0;
+    padding-left: 79px;
+    padding-right: 56px;
+    margin-bottom: 0;
+    padding-bottom: 58px;
+  }
+
+  .production-process__info {
+    margin-bottom: 46px;
+  }
+
+  .production-process__make-order {
+    padding-top: 13px;
+    padding-bottom: 17px;
   }
 }

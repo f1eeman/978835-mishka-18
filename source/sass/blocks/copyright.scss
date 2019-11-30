@@ -21,15 +21,15 @@
 
   &:hover .copyright__logo,
   &:focus .copyright__logo {
-    fill: $color-html-ac-bg-hover;
+    fill: $color-element-footer-bg-hover;
   }
 
   &:active {
-    color: $main-color-text-opacity-hover;
+    color: $main-color-text-opacity-down;
   }
 
   &:active .copyright__logo {
-    fill: $color-html-ac-bg-active;
+    fill: $color-element-footer-bg-active;
   }
 }
 

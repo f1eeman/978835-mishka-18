@@ -1,0 +1,13 @@
+.page-modal-cart {
+  position: fixed;
+  top: 60px;
+
+  z-index: 1000000;
+}
+
+@media (min-width: $tablet-width) {
+  .page-modal-cart {
+    left: 50%;
+    margin-left: -283px;
+  }
+}

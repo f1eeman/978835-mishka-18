@@ -15,15 +15,13 @@
   display: inline-block;
   width: 86px;
   height: 35px;
-}
 
-.main-nav__logo[href="index.html"] {
-  &:hover,
-  &:focus {
+  &[href="index.html"]:hover,
+  &[href="index.html"]:focus {
     opacity: $opacity-hover;
   }
 
-  &:active {
+  &[href="index.html"]:active {
     opacity: $opacity-down;
   }
 }
@@ -141,6 +139,8 @@
   }
 
   .main-nav__list--user-list {
+    margin-left: auto;
+
     order: 1;
   }
 

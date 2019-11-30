@@ -25,6 +25,15 @@
 
   .page-footer__logo {
     display: block;
+
+    &[href="index.html"]:hover .page-footer__logo-icon,
+    &[href="index.html"]:focus .page-footer__logo-icon {
+      fill: $color-element-footer-bg-hover;
+    }
+
+    &[href="index.html"]:active .page-footer__logo-icon {
+      fill: $color-element-footer-bg-active;
+    }
   }
 
   .page-footer__social {
