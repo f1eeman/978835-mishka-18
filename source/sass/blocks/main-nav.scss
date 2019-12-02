@@ -26,6 +26,11 @@
   }
 }
 
+.main-nav__logo-image {
+  width: 100%;
+  height: auto;
+}
+
 .main-nav__toggle {
   position: absolute;
   top: 27px;
@@ -127,14 +132,14 @@
 
     z-index: 10000;
   }
-  //временно из-за логотипа
+
   .main-nav__logo {
     width: 112px;
     height: 46px;
-    outline: 2px solid violet;
   }
 
   .main-nav__logo-box {
+    padding-bottom: 16px;
     text-align: left;
   }
 
@@ -170,13 +175,11 @@
   .main-nav__logo-box {
     margin-left: 65px;
     padding-top: 9px;
-    padding-bottom: 5px;
+    padding-bottom: 0;
   }
-  //временно из-за логотипа
+
   .main-nav__logo {
     width: 149px;
     height: 72px;
-
-    outline: 2px solid rgb(22, 216, 174);
   }
 }

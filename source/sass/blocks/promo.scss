@@ -11,6 +11,13 @@
   text-align: center;
 }
 
+@media (min-resolution: $retina-dppx) {
+  .promo {
+    background-image: url("../img/hero-mobile@2x.jpg");
+    background-size: 575px auto;
+  }
+}
+
 @media (max-width: $mobile-width-only) {
   .promo__title {
     width: 260px;
@@ -57,6 +64,13 @@
     margin-bottom: 373px;
 
     @include text(43px, 50px);
+  }
+}
+
+@media (min-width: $tablet-width) and (min-resolution: $retina-dppx) {
+  .promo {
+    background-image: url("../img/hero-tablet@2x.jpg");
+    background-size: 1150px auto;
   }
 }
 

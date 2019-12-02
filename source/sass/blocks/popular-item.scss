@@ -76,7 +76,7 @@
 
 @media (min-width: $tablet-width) {
   .popular-item {
-    @include zg-line(15px, -24px, 101%);
+    @include zg-line(15px, -24px, auto, 15px);
     z-index: 1000;
   }
 
@@ -136,8 +136,6 @@
 
     width: 333px;
     height: 404px;
-
-    outline: 2px solid red;
   }
 }
 
