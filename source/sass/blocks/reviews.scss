@@ -70,6 +70,7 @@
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
+    background-size: 350px auto;
   }
 
   .reviews__wrapper {
@@ -105,6 +106,12 @@
     @include text(17px, 20px);
 
     order: -1;
+  }
+}
+
+@media (min-width: $tablet-width) and (min-resolution: $retina-dppx) {
+  .reviews__container {
+    background-image: url("../img/review@2x.jpg");
   }
 }
 

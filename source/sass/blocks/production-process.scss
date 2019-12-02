@@ -66,10 +66,10 @@
   height: 150px;
 
   background-color: $color-production-bg;
-  background-image: url("../img/video-desktop@1x.jpg");
+  background-image: url("../img/video-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-size: cover;
+  background-size: 260px auto;
 }
 
 .production-process__play {
@@ -103,6 +103,12 @@
   &:active {
     transform: scale(0.8);
     opacity: 0.3;
+  }
+}
+
+@media (min-width: $mobile-width) and (min-resolution: $retina-dppx) {
+  .production-process__video-box {
+    background-image: url("../img/video-mobile@2x.jpg");
   }
 }
 
@@ -150,9 +156,16 @@
     width: 668px;
     height: 455px;
 
-    background-position: -5px 0;
+    background-image: url("../img/video-tablet@1x.jpg");
+    background-size: 668px;
 
     order: -1;
+  }
+}
+
+@media (min-width: $tablet-width) and (min-resolution: $retina-dppx) {
+  .production-process__video-box {
+    background-image: url("../img/video-tablet@2x.jpg");
   }
 }
 
@@ -172,7 +185,8 @@
 
     width: 682px;
 
-    background-position: 0 0;
+    background-image: url("../img/video-desktop@1x.jpg");
+    background-size: 682px;
   }
 
   .production-process__title {
@@ -204,5 +218,11 @@
   .production-process__make-order {
     padding-top: 13px;
     padding-bottom: 17px;
+  }
+}
+
+@media (min-width: $desktop-width) and (min-resolution: $retina-dppx) {
+  .production-process__video-box {
+    background-image: url("../img/video-desktop@2x.jpg");
   }
 }
