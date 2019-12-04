@@ -110,8 +110,16 @@
     margin: 0 auto;
   }
 
-  .main-nav--no-js .main-nav__toggle-box {
+  .main-nav--nojs .main-nav__toggle-box {
     display: none;
+  }
+
+  .main-nav--nojs .main-nav__list--site-list {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__list--user-list {
+    display: block;
   }
 
   .main-nav__delivery-info {
