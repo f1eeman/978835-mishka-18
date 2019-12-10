@@ -62,13 +62,17 @@
   @include text(15px, 24px);
 }
 
+.product__cart-icon {
+  fill: $color-main-icon-bg;
+}
+
 .product__add-to-catd {
-  &:hover .product__cart-icon-path,
-  &:focus .product__cart-icon-path {
+  &:hover .product__cart-icon,
+  &:focus .product__cart-icon {
     fill: $color-cart-icon-bg-hover;
   }
 
-  &:active .product__cart-icon-path {
+  &:active .product__cart-icon {
     fill: $color-cart-icon-bg-active;
   }
 }

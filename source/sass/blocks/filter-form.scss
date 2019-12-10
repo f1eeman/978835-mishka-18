@@ -239,7 +239,7 @@
   &:hover + .filter-form__icon,
   &:focus + .filter-form__icon {
     fill: $color-filter-icon-bg-hover;
-    opacity: 1;
+    fill-opacity: 1;
   }
 
   &:hover,
@@ -249,11 +249,6 @@
 
   &:active {
     border-bottom-color: $color-border-form-filter-hover;
-  }
-
-  &:active + .filter-form__icon {
-    fill: $color-filter-icon-bg-hover;
-    opacity: 1;
   }
 }
 
@@ -275,7 +270,7 @@
   position: absolute;
 
   fill: $color-filter-icon-bg;
-  opacity: 0.3;
+  fill-opacity: 0.3;
 }
 
 .filter-form__icon--tel {

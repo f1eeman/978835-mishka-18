@@ -13,6 +13,8 @@
 
   width: 18px;
   height: 18px;
+
+  fill: $color-main-icon-bg;
 }
 
 .search-form__label {
@@ -23,12 +25,14 @@
   width: 18px;
   height: 18px;
 
-  &:hover .search-form__loupe-icon-path,
-  &:focus .search-form__loupe-icon-path {
+  cursor: pointer;
+
+  &:hover .search-form__loupe-icon,
+  &:focus .search-form__loupe-icon {
     fill: $color-loupe-icon-bg-hover;
   }
 
-  &:active .search-form__loupe-icon-path {
+  &:active .search-form__loupe-icon {
     fill: $color-loupe-icon-bg-active;
   }
 }
@@ -82,5 +86,11 @@
 
     margin-left: -9px;
     margin-top: -9px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .search-form__label {
+    margin-left: -15px;
   }
 }
