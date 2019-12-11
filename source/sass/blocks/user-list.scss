@@ -9,6 +9,10 @@
   border-bottom: 1px solid $color-border-ph;
 }
 
+.user-list__item:nth-child(2) {
+  padding-top: 26px;
+}
+
 .user-list__link-cart {
   position: relative;
 
@@ -21,8 +25,8 @@
     color: $main-color-text-opacity-hover;
   }
 
-  &[href]:hover .user-list__cart-icon-path,
-  &[href]:focus .user-list__cart-icon-path {
+  &[href]:hover .user-list__cart-icon,
+  &[href]:focus .user-list__cart-icon {
     fill: $color-cart-icon-bg-hover;
   }
 
@@ -30,7 +34,7 @@
     color: $main-color-text-opacity-down;
   }
 
-  &[href]:active .user-list__cart-icon-path {
+  &[href]:active .user-list__cart-icon {
     fill: $color-cart-icon-bg-active;
   }
 }
@@ -42,6 +46,8 @@
 
   width: 20px;
   height: 19px;
+
+  fill: $color-main-icon-bg;
 }
 
 @media (max-width: $mobile-width-only) {
