@@ -252,6 +252,12 @@
   }
 }
 
+
+.filter-form__control:focus + .filter-form__label::before {
+  outline: thin dotted skyblue;
+  outline-offset: 2px;
+}
+
 .filter-form__control--tel {
   padding-right: 45px;
 
