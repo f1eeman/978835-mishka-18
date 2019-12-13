@@ -1,4 +1,5 @@
 .modal-cart {
+  display: none;
   width: 100%;
   padding-top: 29px;
   padding-bottom: 47px;
@@ -21,6 +22,10 @@
   margin-bottom: 23px;
 
   @include text(15px, 30px, 400);
+}
+
+.modal-cart__show {
+  display: block;
 }
 
 @media (max-width: $mobile-width-only) {
