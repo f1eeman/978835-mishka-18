@@ -242,6 +242,11 @@
     fill-opacity: 1;
   }
 
+  &:focus + .filter-form__label::before {
+    outline: thin dotted skyblue;
+    outline-offset: 2px;
+  }
+
   &:hover,
   &:focus {
     border-bottom-color: $color-border-form-filter-hover;
@@ -250,12 +255,6 @@
   &:active {
     border-bottom-color: $color-border-form-filter-hover;
   }
-}
-
-
-.filter-form__control:focus + .filter-form__label::before {
-  outline: thin dotted skyblue;
-  outline-offset: 2px;
 }
 
 .filter-form__control--tel {

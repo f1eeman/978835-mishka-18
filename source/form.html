@@ -47,7 +47,7 @@
             <li class="user-list__item">
               <form class="user-list__search-form search-form search-form--container container" action="https://echo.htmlacademy.ru" method="GET">
                 <p class="search-form__wrap">
-                  <label class="search-form__label" for="search-input">
+                  <label class="search-form__label" for="search-input" tabindex="0">
                     <span class="visually-hidden">Поиск по сайту</span>
                     <svg class="search-form__loupe-icon" width="18px" height="18px">
                       <use xlink:href="#icon-search"></use>
@@ -140,15 +140,15 @@
               <ul class="filter-form__list filter-form__list--by-initials" role="presentation">
                 <li class="filter-form__item filter-form__item--by-initials">
                   <label class="filter-form__label filter-form__label--text" for="user-name">Имя:</label>
-                  <input class="filter-form__control filter-form__control--text filter-form__control--user-data" id="user-name" name="name" type="text" placeholder="Введите ваше имя*" required="">
+                  <input class="filter-form__control filter-form__control--text filter-form__control--user-data" id="user-name" name="name" type="text" placeholder="Введите ваше имя*" required value="">
                 </li>
                 <li class="filter-form__item filter-form__item--by-initials">
                   <label class="filter-form__label filter-form__label--text" for="user-surname">Фамилия:</label>
-                  <input class="filter-form__control filter-form__control--text filter-form__control--user-data" id="user-surname" name="surname" type="text" placeholder="Укажите фамилию*" required="">
+                  <input class="filter-form__control filter-form__control--text filter-form__control--user-data" id="user-surname" name="surname" type="text" placeholder="Укажите фамилию*" required value="">
                 </li>
                 <li class="filter-form__item filter-form__item--by-initials">
                   <label class="filter-form__label filter-form__label--text" for="user-patronymic">Отчество:</label>
-                  <input class="filter-form__control filter-form__control--text filter-form__control--user-data" id="user-patronymic" name="patronymic" type="text" placeholder="Отчество, если желаете">
+                  <input class="filter-form__control filter-form__control--text filter-form__control--user-data" id="user-patronymic" name="patronymic" type="text" placeholder="Отчество, если желаете" required value="">
                 </li>
               </ul>
             </div>
@@ -158,7 +158,7 @@
               <h3 class="filter-form__title filter-form__title--tel filter-form__title--contacts">Тел</h3>
               <p class="filter-form__wrap filter-form__wrap--tel">
                 <label class="filter-form__label filter-form__label--tel visually-hidden" for="user-phone">Тел</label>
-                <input class="filter-form__control filter-form__control--tel filter-form__control--user-data filter-form__control--gray-bg" id="user-phone" name="phone" type="tel" placeholder="+7 XXX XXX XX XX*" required="">
+                <input class="filter-form__control filter-form__control--tel filter-form__control--user-data filter-form__control--gray-bg" id="user-phone" name="phone" type="tel" placeholder="+7 XXX XXX XX XX*" pattern="\+7 [0-9]{3} [0-9]{3} [0-9]{2}" required>
                 <svg class="filter-form__icon filter-form__icon--tel" width="25px" height="25px">
                   <use xlink:href="#icon-phone"></use>
                 </svg>
@@ -170,7 +170,7 @@
               <h3 class="filter-form__title filter-form__title--contacts filter-form__title--email">e-mail</h3>
               <p class="filter-form__wrap filter-form__wrap--email">
                 <label class="filter-form__label filter-form__label--email visually-hidden" for="user-email">e-mail</label>
-                <input class="filter-form__control filter-form__control--email filter-form__control--user-data filter-form__control--gray-bg" id="user-email" name="email" type="email" placeholder="Ваш Email*" required="">
+                <input class="filter-form__control filter-form__control--email filter-form__control--user-data filter-form__control--gray-bg" id="user-email" name="email" type="email" placeholder="Ваш Email*" required>
                 <svg class="filter-form__icon filter-form__icon--email" width="32px" height="32px">
                   <use xlink:href="#icon-mail"></use>
                 </svg>

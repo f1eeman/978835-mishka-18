@@ -47,7 +47,7 @@
             <li class="user-list__item">
               <form class="user-list__search-form search-form search-form--container container" action="https://echo.htmlacademy.ru" method="GET">
                 <p class="search-form__wrap">
-                  <label class="search-form__label" for="search-input">
+                  <label class="search-form__label" for="search-input" tabindex="0">
                     <span class="visually-hidden">Поиск по сайту</span>
                     <svg class="search-form__loupe-icon" width="18px" height="18px">
                       <use xlink:href="#icon-search"></use>
@@ -194,35 +194,38 @@
       </section>
       <section class="page-main__contacts contacts">
         <div class="contacts__container container">
-          <div class="contacts__wrap">
-            <h2 class="contacts__title">Контакты</h2>
-            <table class="contacts__list">
-              <tbody class="contacts__tbody">
-                <tr class="contacts__trow">
-                  <td class="contacts__tcell contacts__type">e-mail:</td>
-                  <td class="contacts__tcell contacts__value">
-                    <a class="contacts__email" href="#">info@mimimishkashop.ru</a>
-                  </td>
-                </tr>
-                <tr class="contacts__trow">
-                  <td class="contacts__tcell contacts__type">адрес:</td>
-                  <td class="contacts__tcell contacts__value">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="contacts__map-box">
-              <picture>
-                <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
-                <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-                <img class="contacts__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+          <h2 class="contacts__title">Контакты</h2>
+          <table class="contacts__list">
+            <tbody class="contacts__tbody">
+              <tr class="contacts__trow">
+                <td class="contacts__tcell contacts__type">e-mail:</td>
+                <td class="contacts__tcell contacts__value">
+                  <a class="contacts__email" href="#">info@mimimishkashop.ru</a>
+                </td>
+              </tr>
+              <tr class="contacts__trow">
+                <td class="contacts__tcell contacts__type">адрес:</td>
+                <td class="contacts__tcell contacts__value">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="contacts__map-wrap">
+          <iframe class="contacts__iframe-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625305624!2d30.320853351068067!3d59.93871916896601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2skz!4v1576268970076!5m2!1sru!2skz" width="320" height="457" allowfullscreen=""></iframe>
+          <div class="contacts__map-box">
+            <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+              <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+              <img class="contacts__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
               </picture>
             </div>
-            <a class="contacts__write-to-us button" href="#">Напишите нам</a>
-          </div>
         </div>
+        <p class="contacts__box container">
+          <a class="contacts__write-to-us button" href="#">Напишите нам</a>
+        </p>
       </section>
     </main>
     <footer class="page-footer">
