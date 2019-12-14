@@ -33,12 +33,12 @@
 
 .popular-item__characteristics-list {
   width: 100%;
-  border-collapse: collapse;
   margin-bottom: 10px;
 
   @include text (15px, 20px, 400);
-
   color: $secondary-color-text;
+
+  border-collapse: collapse;
 }
 
 .popular-item__row {
@@ -89,8 +89,9 @@
   }
 
   .popular-item__title {
-    @include text(43px, 50px);
     margin-bottom: 50px;
+
+    @include text(43px, 50px);
   }
 
   .popular-item__description {
@@ -151,8 +152,8 @@
   }
 
   .popular-item__wrap {
-    padding-top: 122px;
     margin-left: 175px;
+    padding-top: 122px;
   }
 
   .popular-item__title {

@@ -1,6 +1,7 @@
 .product__wrap {
   padding-top: 26px;
   padding-left: 28px;
+
   border: 1px solid $color-border-price;
 }
 
@@ -20,7 +21,6 @@
   margin-bottom: 5px;
 
   @include text(17px, 24px);
-
   color: $main-color-text;
 
   &:hover,
@@ -44,7 +44,6 @@
   margin-bottom: 18px;
 
   @include text(13px, 30px, 400);
-
   color: $secondary-color-text;
 }
 
@@ -55,6 +54,7 @@
   margin: 0;
   padding-top: 21px;
   padding-bottom: 28px;
+
   border-top: 1px solid $color-border-price;
 }
 
@@ -87,7 +87,6 @@
     @include text(20px, 24px);
   }
 
-  //временно из-за изображения
   .product__link--image {
     width: 334px;
     height: 334px;
@@ -96,7 +95,6 @@
   .product__wrap {
     display: flex;
     flex-direction: column;
-
     flex-grow: 1;
   }
 
@@ -129,10 +127,9 @@
     display: flex;
     min-height: 197px;
     flex-direction: column;
-
     flex-grow: 0;
   }
-  //временно из-за изображения
+
   .product__link--image {
     width: 316px;
     height: 462px;

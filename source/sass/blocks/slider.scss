@@ -12,9 +12,9 @@
   width: 50%;
   height: 52px;
   padding: 0;
-  border: 1px solid $color-border-slider-button;
 
   background-color: transparent;
+  border: 1px solid $color-border-slider-button;
 
   cursor: pointer;
 
@@ -72,6 +72,7 @@
     width: 50%;
     height: 52px;
     padding: 0;
+
     border: none;
   }
 }

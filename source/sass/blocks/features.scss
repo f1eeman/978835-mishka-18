@@ -125,8 +125,9 @@
   }
 
   .features__title {
-    @include text(43px, 50px);
     margin-bottom: 50px;
+
+    @include text(43px, 50px);
   }
 
   .features__list {
@@ -150,6 +151,7 @@
 
   .features__item--domestic-production {
     padding-top: 55px;
+
     order: 3;
 
     &::before {
@@ -169,6 +171,7 @@
 
   .features__item--gift-wrap {
     padding-top: 56px;
+
     order: 5;
 
     &::before {
@@ -179,8 +182,8 @@
 
 @media (min-width: $desktop-width) {
   .features__wrap {
-    padding-top: 59px;
     margin-left: 175px;
+    padding-top: 59px;
   }
 
   .features__title {

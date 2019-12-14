@@ -5,9 +5,10 @@
   padding-top: 24px;
   padding-left: 88px;
   padding-bottom: 24px;
-  border: 1px solid $color-border-production-process;
 
   @include text (17px, 24px);
+
+  border: 1px solid $color-border-production-process;
 
   &::before {
     content: "";
@@ -30,6 +31,7 @@
   padding-left: 33px;
   padding-right: 34px;
   padding-bottom: 33px;
+
   border: 1px solid $color-border-production-process;
   border-top: none;
 }
@@ -51,7 +53,6 @@
   margin-bottom: 24px;
 
   @include text (13px, 24px, 400);
-
   color: $secondary-color-text;
 }
 
@@ -82,13 +83,13 @@
   height: 77px;
   margin-left: -50px;
   margin-top: -38px;
-  border: none;
 
   background-color: transparent;
   background-image: url("../img/icon-play.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+  border: none;
 
   cursor: pointer;
 
@@ -130,9 +131,10 @@
     padding-top: 37px;
     padding-left: 105px;
     padding-bottom: 10px;
-    border-bottom: none;
 
     @include text (20px, 24px);
+
+    border-bottom: none;
 
     &::before {
       top: 33px;
@@ -205,9 +207,9 @@
   .production-process__wrap {
     width: 370px;
     flex-shrink: 0;
+    margin-bottom: 0;
     padding-left: 79px;
     padding-right: 56px;
-    margin-bottom: 0;
     padding-bottom: 58px;
   }
 

@@ -11,16 +11,18 @@
 
 .contacts__list {
   width: 100%;
-  border-collapse: collapse;
   margin-bottom: 9px;
 
   @include text(15px, 30px, 400);
   color: $secondary-color-text;
+
+  border-collapse: collapse;
 }
 
 .contacts__tcell {
   padding: 0;
   padding-bottom: 29px;
+
   vertical-align: top;
 }
 
@@ -30,9 +32,10 @@
 
 .contacts__email {
   display: inline-block;
-  border-bottom: 1px solid $color-border-mail;
 
   color: $secondary-color-text;
+
+  border-bottom: 1px solid $color-border-mail;
 
   &:hover,
   &:focus {
@@ -52,7 +55,6 @@
   position: relative;
 
   min-height: 457px;
-
   margin-bottom: 35px;
 }
 
@@ -60,6 +62,8 @@
   position: relative;
 
   width: 100%;
+
+  border: none;
 
   z-index: 1;
 }
@@ -141,6 +145,7 @@
   }
 
   .contacts__trow {
+    display: block;
     width: 50%;
   }
 
@@ -208,12 +213,18 @@
   }
 
   .contacts__list {
+    width: auto;
     margin-left: 175px;
     margin-bottom: 50px;
   }
 
   .contacts__tbody {
     display: block;
+    width: auto;
+  }
+
+  .contacts__trow {
+    display: table-row;
   }
 
   .contacts__tcell {

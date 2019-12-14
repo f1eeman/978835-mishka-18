@@ -3,13 +3,13 @@
   width: 100%;
   padding-top: 29px;
   padding-bottom: 47px;
-  border-top: 1px solid $color-border-modal;
-  border-bottom: 1px solid $color-border-modal;
 
   text-align: center;
 
   background-color: $color-modal-bg;
   box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+  border-top: 1px solid $color-border-modal;
+  border-bottom: 1px solid $color-border-modal;
 }
 
 .modal-cart__title {
@@ -43,6 +43,7 @@
     padding-bottom: 45px;
     padding-left: 105px;
     padding-right: 105px;
+
     border-left: 1px solid $color-border-modal;
     border-right: 1px solid $color-border-modal;
   }

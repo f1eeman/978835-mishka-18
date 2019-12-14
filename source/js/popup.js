@@ -1,5 +1,5 @@
-var link = document.querySelector(".popular-item__to-order");
 var popup = document.querySelector(".modal-cart");
+var link = document.querySelector(".popular-item__to-order");
 var overlay = document.querySelector(".modal-overlay")
 
 link.addEventListener("click", function (evt) {
@@ -10,9 +10,9 @@ link.addEventListener("click", function (evt) {
 
 window.addEventListener("keydown", function(evt) {
   if (evt.keyCode === 27 && popup.classList.contains("modal-cart__show")) {
-      evt.preventDefault();
-      popup.classList.remove("modal-cart__show");
-      overlay.classList.remove("modal-overlay__show");
+    evt.preventDefault();
+    popup.classList.remove("modal-cart__show");
+    overlay.classList.remove("modal-overlay__show");
   }
 });
 

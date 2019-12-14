@@ -6,9 +6,10 @@
   margin: 0;
   padding-top: 21px;
   padding-bottom: 19px;
-  border-bottom: 1px solid $color-border-ph;
 
   text-align: center;
+
+  border-bottom: 1px solid $color-border-ph;
 }
 
 .main-nav__logo {
@@ -39,9 +40,10 @@
 
   width: 23px;
   height: 23px;
-  border: none;
 
   background-color: transparent;
+  border: none;
+
   cursor: pointer;
 }
 
@@ -148,6 +150,7 @@
 
   .main-nav__logo-box {
     padding-bottom: 16px;
+
     text-align: left;
   }
 
@@ -177,6 +180,7 @@
 
   .main-nav__list--offer-list {
     display: block;
+
     order: 3;
   }
 
