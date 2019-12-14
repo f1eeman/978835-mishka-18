@@ -25,11 +25,11 @@
 
   &:hover,
   &:focus {
-    color: $main-color-text-opacity-hover;
+    color: $main-color-text-hover;
   }
 
   &:active {
-    color: $main-color-text-opacity-down;
+    color: $main-color-text-active;
   }
 }
 

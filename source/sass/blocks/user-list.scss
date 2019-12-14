@@ -23,7 +23,7 @@
 
   &[href]:hover,
   &[href]:focus {
-    color: $main-color-text-opacity-hover;
+    color: $main-color-text-hover;
   }
 
   &[href]:hover .user-list__cart-icon,
@@ -32,7 +32,7 @@
   }
 
   &[href]:active {
-    color: $main-color-text-opacity-down;
+    color: $main-color-text-active;
   }
 
   &[href]:active .user-list__cart-icon {

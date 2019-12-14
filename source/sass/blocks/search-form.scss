@@ -53,11 +53,11 @@
 
   &:hover::placeholder,
   &:focus::placeholder {
-    color: $main-color-text-opacity-hover;
+    color: $main-color-text-hover;
   }
 
   &:active::placeholder {
-    color: $main-color-text-opacity-down;
+    color: $main-color-text-active;
   }
 }
 
