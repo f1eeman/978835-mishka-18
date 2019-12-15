@@ -16,7 +16,6 @@
 
 .copyright__link {
   @include text(19px, 18px);
-
   color: $main-color-text;
 
   &:hover .copyright__logo,
@@ -25,12 +24,14 @@
   }
 
   &:active {
-    color: $main-color-text-opacity-down;
+    color: $main-color-text-active;
   }
 
   &:active .copyright__logo {
     fill: $color-element-footer-bg-active;
   }
+
+  @include ie-bug-fix();
 }
 
 .copyright__text {

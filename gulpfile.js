@@ -59,22 +59,6 @@ gulp.task("images", function () {
     .pipe(gulp.dest("source/img"));
 });
 
-gulp.task("svgo", function () {
-  return gulp.src("source/img/**/*.svg")
-    .pipe(imagemin([
-      imagemin.svgo()
-    ]))
-    .pipe(gulp.dest("source/img"));
-});
-
-gulp.task("jpegprogressive", function () {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
-    .pipe(imagemin([
-      imagemin.jpegtran({progressive: true}),
-    ]))
-    .pipe(gulp.dest("source/img"));
-});
-
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))

@@ -2,11 +2,12 @@
   height: 52px;
   padding-top: 15px;
   padding-bottom: 15px;
-  border: 2px solid $color-btn-border;
 
   color: $secondary-color-text;
   text-align: center;
   text-transform: uppercase;
+
+  border: 2px solid $color-btn-border;
 
   &:hover,
   &:focus {

@@ -9,11 +9,11 @@
 
   &[href]:hover,
   &[href]:focus {
-    color: $main-color-text-opacity-hover;
+    color: $main-color-text-hover;
   }
 
   &[href]:active {
-    color: $main-color-text-opacity-down;
+    color: $main-color-text-active;
   }
 }
 
@@ -21,6 +21,7 @@
   .site-list__item {
     padding-top: 26px;
     padding-bottom: 28px;
+
     border-bottom: 1px solid $color-border-ph;
   }
 

@@ -8,6 +8,8 @@
 
 .page-footer__logo {
   display: none;
+
+  @include ie-bug-fix();
 }
 
 .page-footer__logo-icon {
@@ -20,7 +22,7 @@
     display: flex;
     flex-wrap: wrap;
     min-height: 143px;
-    align-items: center;
+    padding-top: 51px;
   }
 
   .page-footer__logo {
@@ -37,8 +39,13 @@
   }
 
   .page-footer__social {
+    margin-top: 5px;
     margin-left: 159px;
     margin-right: auto;
+  }
+
+  .page-footer__copyright {
+    margin-top: 5px;
   }
 }
 

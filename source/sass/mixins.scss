@@ -35,6 +35,23 @@
   list-style: none;
 }
 
+//Лечит проблему поведения свг элемента, как ссылки, при нажатии
+@mixin ie-bug-fix() {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+  }
+}
+
 @mixin mobile-view($mobile-width: 320px, $mobile-padding: 0 30px,) {
   width: $mobile-width;
   padding: $mobile-padding;

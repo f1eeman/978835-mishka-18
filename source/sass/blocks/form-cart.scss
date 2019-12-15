@@ -19,9 +19,10 @@
   min-height: 52px;
   padding-top: 17px;
   padding-bottom: 10px;
-  border: 2px solid $color-border-modal-label;
 
   @include text(17px, 16px);
+
+  border: 2px solid $color-border-modal-label;
 
   cursor: pointer;
 
@@ -33,7 +34,6 @@
 .form-cart__add-to-cart {
   width: 100%;
   min-height: 52px;
-  border: none;
 
   font: inherit;
 
@@ -42,6 +42,8 @@
   text-transform: uppercase;
 
   background-color: $color-btn-cart-bg;
+  border: none;
+
   cursor: pointer;
 
   &:hover,

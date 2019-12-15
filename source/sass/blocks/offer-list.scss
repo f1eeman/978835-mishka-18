@@ -1,6 +1,7 @@
 @media (min-width: $desktop-width) {
   .offer-list {
     display: flex;
+    flex-wrap: wrap;
 
     @include list-reset();
   }
@@ -16,11 +17,11 @@
 
     &[href]:hover,
     &[href]:focus {
-      color: $main-color-text-opacity-hover;
+      color: $main-color-text-hover;
     }
 
     &[href]:active {
-      color: $main-color-text-opacity-down;
+      color: $main-color-text-active;
     }
   }
 }

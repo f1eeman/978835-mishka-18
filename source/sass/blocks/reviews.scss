@@ -17,7 +17,9 @@
 
 .reviews__list {
   @include list-reset();
+}
 
+.reviews__item {
   margin-bottom: 31px;
 }
 

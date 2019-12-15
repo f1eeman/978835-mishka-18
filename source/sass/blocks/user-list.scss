@@ -6,6 +6,7 @@
 .user-list__item {
   padding-top: 24px;
   padding-bottom: 27px;
+
   border-bottom: 1px solid $color-border-ph;
 }
 
@@ -14,28 +15,43 @@
 }
 
 .user-list__link-cart {
+
   position: relative;
 
   padding-left: 46px;
 
   color: $main-color-text;
 
-  &[href]:hover,
-  &[href]:focus {
-    color: $main-color-text-opacity-hover;
+  &:hover,
+  &:focus {
+    color: $main-color-text-hover;
   }
 
-  &[href]:hover .user-list__cart-icon,
-  &[href]:focus .user-list__cart-icon {
+  &:hover .user-list__cart-icon,
+  &:focus .user-list__cart-icon {
     fill: $color-cart-icon-bg-hover;
   }
 
-  &[href]:active {
-    color: $main-color-text-opacity-down;
+  &:active {
+    color: $main-color-text-active;
   }
 
-  &[href]:active .user-list__cart-icon {
+  &:active .user-list__cart-icon {
     fill: $color-cart-icon-bg-active;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    z-index: 1;
   }
 }
 

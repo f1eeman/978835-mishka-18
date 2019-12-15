@@ -1,4 +1,4 @@
-.contacts__wrap {
+.contacts__container {
   padding-top: 37px;
 }
 
@@ -9,13 +9,75 @@
   @include text(18px, 30px);
 }
 
-.contacts__map-box {
+.contacts__list {
+  width: 100%;
+  margin-bottom: 9px;
+
+  @include text(15px, 30px, 400);
+  color: $secondary-color-text;
+
+  border-collapse: collapse;
+}
+
+.contacts__tcell {
+  padding: 0;
+  padding-bottom: 29px;
+
+  vertical-align: top;
+}
+
+.contacts__type {
+  width: 78px;
+}
+
+.contacts__email {
+  display: inline-block;
+
+  color: $secondary-color-text;
+
+  border-bottom: 1px solid $color-border-mail;
+
+  &:hover,
+  &:focus {
+    border-bottom-color: $color-border-mail-hover;
+
+    color: $color-text-mail-hover;
+  }
+
+  &:active {
+    border-bottom-color: $color-border-mail-active;
+
+    color: $color-text-mail-active;
+  }
+}
+
+.contacts__map-wrap {
   position: relative;
+
+  min-height: 457px;
+  margin-bottom: 35px;
+}
+
+.contacts__iframe-map {
+  position: relative;
+
+  width: 100%;
+
+  border: none;
+
+  z-index: 1;
+}
+
+.contacts__map-box {
+  position: absolute;
+  top: 0;
+  left: 50%;
 
   width: 322px;
   height: 457px;
-  margin-left: -30px;
-  margin-bottom: 39px;
+  margin-left: -161px;
+
+  z-index: 0;
 
   &::after {
     content: "";
@@ -35,45 +97,6 @@
   }
 }
 
-.contacts__list {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 9px;
-
-  @include text(15px, 30px, 400);
-  color: $secondary-color-text;
-}
-
-.contacts__tcell {
-  padding: 0;
-  padding-bottom: 29px;
-  vertical-align: top;
-}
-
-.contacts__type {
-  width: 78px;
-}
-
-.contacts__email {
-  display: inline-block;
-  border-bottom: 1px solid $color-border-mail;
-
-  color: $secondary-color-text;
-
-  &:hover,
-  &:focus {
-    border-bottom-color: $color-border-mail-hover;
-
-    color: $color-text-mail-hover;
-  }
-
-  &:active {
-    border-bottom-color: $color-border-mail-active;
-
-    color: $color-text-mail-active;
-  }
-}
-
 .contacts__write-to-us {
   display: block;
   margin-bottom: 39px;
@@ -82,12 +105,10 @@
 }
 
 @media (min-width: $tablet-width) {
-  .contacts__wrap {
-    padding-top: 61px;
-  }
-
   .contacts__container {
     position: relative;
+
+    padding-top: 61px;
 
     &::before {
       content: "";
@@ -124,6 +145,7 @@
   }
 
   .contacts__trow {
+    display: block;
     width: 50%;
   }
 
@@ -139,16 +161,24 @@
     width: 255px;
   }
 
+  .contacts__map-wrap {
+    margin-bottom: 52px;
+  }
+
   .contacts__map-box {
     width: 768px;
-    height: 457px;
-    margin-left: -50px;
-    margin-bottom: 55px;
+    margin-left: -384px;
+
+    &::after {
+      margin-left: -21px;
+      margin-top: -89px;
+    }
   }
 
   .contacts__write-to-us {
     width: 230px;
-    margin-left: 220px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 57px;
 
     @include text(17px, 20px);
@@ -156,45 +186,80 @@
 }
 
 @media (min-width: $desktop-width) {
-  .contacts__wrap {
-    margin-left: 175px;
-    padding-top: 141px;
-  }
+  .contacts {
+    position: relative;
 
-  .contacts__title {
-    @include text(53px, 57px);
+    width: 1150px;
+    margin: 0 auto;
+    padding: 0 50px;
   }
 
   .contacts__container {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    padding-top: 141px;
+
     &::before {
       top: 133px;
-      left: 113px;
+      left: 63px;
     }
   }
 
+  .contacts__title {
+    margin-left: 175px;
+
+    @include text(53px, 57px);
+  }
+
   .contacts__list {
+    width: auto;
+    margin-left: 175px;
     margin-bottom: 50px;
   }
 
   .contacts__tbody {
     display: block;
+    width: auto;
+  }
+
+  .contacts__trow {
+    display: table-row;
   }
 
   .contacts__tcell {
     padding-bottom: 29px;
   }
 
+  .contacts__box {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
   .contacts__write-to-us {
-    margin-left: 0;
+    margin-left: 175px;
     margin-bottom: 105px;
   }
 
-  .contacts__map-box {
+  .contacts__map-wrap {
     position: absolute;
     top: 71px;
     right: 50px;
 
     width: 525px;
-    height: 457px;
+    margin-bottom: 0;
+  }
+
+  .contacts__map-box {
+    left: 0;
+
+    width: 525px;
+    margin-left: 0;
+
+    &::after {
+      margin-left: -25px;
+      margin-top: -82px;
+    }
   }
 }

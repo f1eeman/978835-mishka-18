@@ -6,6 +6,7 @@
   margin: 0;
   margin-bottom: 30px;
   padding: 0;
+
   border: none;
 }
 
@@ -107,9 +108,9 @@
 
 .filter-form__item--by-color {
   min-height: 43px;
+  margin-bottom: 18px;
   padding-top: 10px;
   padding-left: 62px;
-  margin-bottom: 18px;
 }
 
 .filter-form__item--by-initials {
@@ -138,8 +139,8 @@
 
     width: 38px;
     height: 38px;
-    border: 2px solid $color-label-border;
 
+    border: 2px solid $color-label-border;
     border-radius: 50%;
   }
 
@@ -185,6 +186,7 @@
 
     width: 40px;
     height: 39px;
+
     border: 2px solid $color-label-border;
   }
 
@@ -212,6 +214,7 @@
     border: 2px solid $color-checkbox-checked-bg;
     border-top-style: none;
     border-right-style: none;
+
     transform: rotate(-45deg);
   }
 }
@@ -224,12 +227,13 @@
 .filter-form__control {
   width: 100%;
   padding-bottom: 15px;
-  border: none;
-  border-bottom: 2px solid $color-border-form-filter;
 
   font: inherit;
 
   @include text(17px, 18px, 400);
+
+  border: none;
+  border-bottom: 2px solid $color-border-form-filter;
 
   &::placeholder {
     @include text(17px, 18px, 400);
@@ -242,6 +246,11 @@
     fill-opacity: 1;
   }
 
+  &:focus + .filter-form__label::before {
+    outline: thin dotted skyblue;
+    outline-offset: 2px;
+  }
+
   &:hover,
   &:focus {
     border-bottom-color: $color-border-form-filter-hover;
@@ -250,12 +259,6 @@
   &:active {
     border-bottom-color: $color-border-form-filter-hover;
   }
-}
-
-
-.filter-form__control:focus + .filter-form__label::before {
-  outline: thin dotted skyblue;
-  outline-offset: 2px;
 }
 
 .filter-form__control--tel {
@@ -298,6 +301,7 @@
 .filter-form__control--textarea {
   min-height: 142px;
   padding: 15px;
+
   border: 2px solid $color-border-form-filter;
 
   &:hover,
@@ -430,8 +434,8 @@
 
   .filter-form__item--by-type {
     min-height: 55px;
-    padding-left: 82px;
     margin-bottom: 20px;
+    padding-left: 82px;
   }
 
   .filter-form__item--interior {
@@ -441,10 +445,10 @@
   .filter-form__item--by-color {
     width: 239px;
     min-height: 58px;
-    padding-top: 17px;
-    padding-left: 82px;
     margin-left: 23px;
     margin-bottom: 18px;
+    padding-top: 17px;
+    padding-left: 82px;
   }
 
   .filter-form__item--by-initials {

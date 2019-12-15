@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-    <div style="display: none;">
+    <div class="page-svg-box">
       <include src="build/img/sprite.svg"></include>
     </div>
     <header class="page-header page-header--gray-bg">
@@ -47,9 +47,9 @@
             <li class="user-list__item">
               <form class="user-list__search-form search-form search-form--container container" action="https://echo.htmlacademy.ru" method="GET">
                 <p class="search-form__wrap">
-                  <label class="search-form__label" for="search-input">
+                  <label class="search-form__label" for="search-input" tabindex="0">
                     <span class="visually-hidden">Поиск по сайту</span>
-                    <svg class="search-form__loupe-icon" width="18px" height="18px">
+                    <svg class="search-form__loupe-icon" width="18" height="18">
                       <use xlink:href="#icon-search"></use>
                     </svg>
                   </label>
@@ -60,7 +60,7 @@
             <li class="user-list__item">
               <p class="user-list__link-cart-container">
                 <a class="user-list__link-cart" href="#">
-                  <svg class="user-list__cart-icon" width="20px" height="19px">
+                  <svg class="user-list__cart-icon" width="20" height="19">
                     <use xlink:href="#icon-cart"></use>
                   </svg>
                   Корзина: пока пуста
@@ -87,7 +87,7 @@
           <h2 class="catalog__caption visually-hidden">Список товаров</h2>
           <ul class="catalog__list">
             <li class="catalog__item product">
-              <a class="product__link product__link--image" href="#">
+              <a class="product__link product__link--image" href="hare.html">
                 <picture>
                   <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.webp 1x, img/photo-hare-tablet@2x.webp 2x">
@@ -98,15 +98,15 @@
                 </picture>
               </a>
               <div class="product__wrap">
-                <a class="product__link" href="#">
+                <a class="product__link" href="hare.html">
                   <span class="product__title">Зайчик-попрыгайчик</span>
                 </a>
                 <p class="product__description">Рост 30 см, вес 200 г</p>
                 <p class="product__price">
                   <b class="product__price-content">1 200 руб.</b>
-                  <a class="product__add-to-catd" href="#">
+                  <a class="product__add-to-cart" href="make-order.html">
                     <span class="visually-hidden">Добавить в корзину</span>
-                    <svg class="product__cart-icon" width="20px" height="19px">
+                    <svg class="product__cart-icon" width="20" height="19">
                       <use xlink:href="#icon-cart"></use>
                     </svg>
                   </a>
@@ -114,7 +114,7 @@
               </div>
             </li>
             <li class="catalog__item product">
-              <a class="product__link product__link--image" href="#">
+              <a class="product__link product__link--image" href="bowl.html">
                 <picture>
                   <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.webp 1x, img/photo-bowl-tablet@2x.webp 2x">
@@ -125,15 +125,15 @@
                 </picture>
               </a>
               <div class="product__wrap">
-                <a class="product__link" href="#">
+                <a class="product__link" href="bowl.html">
                   <span class="product__title">Корзинка для белья</span>
                 </a>
                 <p class="product__description">Диаметр 15 см, высота 10 см</p>
                 <p class="product__price">
                   <b class="product__price-content">690 руб.</b>
-                  <a class="product__add-to-catd" href="#">
+                  <a class="product__add-to-cart" href="make-order.html">
                     <span class="visually-hidden">Добавить в корзину</span>
-                    <svg class="product__cart-icon" width="20px" height="19px">
+                    <svg class="product__cart-icon" width="20" height="19">
                       <use xlink:href="#icon-cart"></use>
                     </svg>
                   </a>
@@ -141,7 +141,7 @@
               </div>
             </li>
             <li class="catalog__item product">
-              <a class="product__link product__link--image" href="#">
+              <a class="product__link product__link--image" href="big-bowl.html">
                 <picture>
                   <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.webp 1x, img/photo-toys-tablet@2x.webp 2x">
@@ -152,15 +152,15 @@
                 </picture>
               </a>
               <div class="product__wrap">
-                <a class="product__link" href="#">
+                <a class="product__link" href="big-bowl.html">
                   <span class="product__title">Большая корзинка <br> для игрушек</span>
                 </a>
                 <p class="product__description">Диаметр 30 см, высота 30 см</p>
                 <p class="product__price">
                   <b class="product__price-content">1 500 руб.</b>
-                  <a class="product__add-to-catd" href="#">
+                  <a class="product__add-to-cart" href="make-order.html">
                     <span class="visually-hidden">Добавить в корзину</span>
-                    <svg class="product__cart-icon" width="20px" height="19px">
+                    <svg class="product__cart-icon" width="20" height="19">
                       <use xlink:href="#icon-cart"></use>
                     </svg>
                   </a>
@@ -190,7 +190,7 @@
     <footer class="page-footer">
       <div class="page-footer__container container">
         <a class="page-footer__logo" href="index.html">
-          <svg class="page-footer__logo-icon" width="102px" height="34px">
+          <svg class="page-footer__logo-icon" width="102" height="34">
             <use xlink:href="#logo-footer"></use>
           </svg>
         </a>
@@ -233,7 +233,7 @@
         </div>
       </div>
     </footer>
-    <!-- <section class="page-modal-cart modal-cart">
+    <section class="page-modal-cart modal-cart">
       <div class="modal-cart__container container">
         <h2 class="modal-cart__title">Добавить в корзину</h2>
         <p class="modal-cart__choice-size">Выберите размер:</p>
@@ -254,7 +254,7 @@
         </form>
       </div>
     </section>
-    <div class="modal-overlay"></div> -->
-    <script src="js/main-nav.js"></script>
+    <div class="modal-overlay"></div>
+    <script src="js/script.js"></script>
   </body>
 </html>

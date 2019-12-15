@@ -1,6 +1,7 @@
 .product__wrap {
   padding-top: 26px;
   padding-left: 28px;
+
   border: 1px solid $color-border-price;
 }
 
@@ -20,16 +21,15 @@
   margin-bottom: 5px;
 
   @include text(17px, 24px);
-
   color: $main-color-text;
 
   &:hover,
   &:focus {
-    color: $main-color-text-opacity-hover;
+    color: $main-color-text-hover;
   }
 
   &:active {
-    color: $main-color-text-opacity-down;
+    color: $main-color-text-active;
   }
 }
 
@@ -44,17 +44,18 @@
   margin-bottom: 18px;
 
   @include text(13px, 30px, 400);
-
   color: $secondary-color-text;
 }
 
 .product__price {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 204px;
   margin: 0;
   padding-top: 21px;
   padding-bottom: 28px;
+
   border-top: 1px solid $color-border-price;
 }
 
@@ -66,7 +67,7 @@
   fill: $color-main-icon-bg;
 }
 
-.product__add-to-catd {
+.product__add-to-cart {
   &:hover .product__cart-icon,
   &:focus .product__cart-icon {
     fill: $color-cart-icon-bg-hover;
@@ -75,11 +76,14 @@
   &:active .product__cart-icon {
     fill: $color-cart-icon-bg-active;
   }
+
+  @include ie-bug-fix();
 }
 
 @media (min-width: $tablet-width) {
   .product {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
   }
 
@@ -87,7 +91,6 @@
     @include text(20px, 24px);
   }
 
-  //временно из-за изображения
   .product__link--image {
     width: 334px;
     height: 334px;
@@ -95,8 +98,8 @@
 
   .product__wrap {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-
     flex-grow: 1;
   }
 
@@ -126,13 +129,11 @@
   }
 
   .product__wrap {
-    display: flex;
     min-height: 197px;
     flex-direction: column;
-
     flex-grow: 0;
   }
-  //временно из-за изображения
+
   .product__link--image {
     width: 316px;
     height: 462px;
