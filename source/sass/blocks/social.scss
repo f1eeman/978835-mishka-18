@@ -18,17 +18,21 @@
   margin: 0 auto;
 }
 
-.social__icon {
-  fill: $color-social-bg;
-
-  &:hover,
-  &:focus {
+.social__link {
+  &:hover .social__icon,
+  &:focus .social__icon {
     fill: $color-element-footer-bg-hover;
   }
 
-  &:active {
+  &:active .social__icon {
     fill: $color-element-footer-bg-active;
   }
+
+  @include ie-bug-fix();
+}
+
+.social__icon {
+  fill: $color-social-bg;
 }
 
 .social__icon-instagram {

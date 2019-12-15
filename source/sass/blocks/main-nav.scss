@@ -25,6 +25,8 @@
   &[href="index.html"]:active {
     opacity: $opacity-down;
   }
+
+  @include ie-bug-fix();
 }
 
 .main-nav__logo-image {

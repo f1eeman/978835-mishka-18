@@ -49,6 +49,7 @@
 
 .product__price {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 204px;
   margin: 0;
@@ -75,11 +76,14 @@
   &:active .product__cart-icon {
     fill: $color-cart-icon-bg-active;
   }
+
+  @include ie-bug-fix();
 }
 
 @media (min-width: $tablet-width) {
   .product {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
   }
 
@@ -94,6 +98,7 @@
 
   .product__wrap {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     flex-grow: 1;
   }
@@ -124,7 +129,6 @@
   }
 
   .product__wrap {
-    display: flex;
     min-height: 197px;
     flex-direction: column;
     flex-grow: 0;

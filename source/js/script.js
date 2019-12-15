@@ -1,9 +1,9 @@
 var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
-var popup = document.querySelector(".modal-cart");
-var link = document.querySelector(".popular-item__to-order");
-var overlay = document.querySelector(".modal-overlay")
-var elements = document.querySelectorAll(".product__add-to-cart");
+var popup = document.querySelector('.modal-cart');
+var link = document.querySelector('.popular-item__to-order');
+var overlay = document.querySelector('.modal-overlay')
+var elements = document.querySelectorAll('.product__add-to-cart');
 
 navMain.classList.remove('main-nav--nojs');
 
@@ -18,31 +18,31 @@ navToggle.addEventListener('click', function() {
 });
 
 if (link) {
-  link.addEventListener("click", function (evt) {
+  link.addEventListener('click', function (evt) {
     evt.preventDefault();
-    popup.classList.add("modal-cart__show");
-    overlay.classList.add("modal-overlay__show");
+    popup.classList.add('modal-cart__show');
+    overlay.classList.add('modal-overlay__show');
   });
 }
+
 for (var i = 0; i < elements.length; i++) {
-  var element = elements[i];
-  element.addEventListener("click", function (evt) {
+  elements[i].addEventListener('click', function (evt) {
   evt.preventDefault();
-  popup.classList.add("modal-cart__show");
-  overlay.classList.add("modal-overlay__show");
+  popup.classList.add('modal-cart__show');
+  overlay.classList.add('modal-overlay__show');
   });
 };
 
-window.addEventListener("keydown", function(evt) {
-  if (evt.keyCode === 27 && popup.classList.contains("modal-cart__show")) {
+window.addEventListener('keydown', function(evt) {
+  if (evt.keyCode === 27 && popup.classList.contains('modal-cart__show')) {
     evt.preventDefault();
-    popup.classList.remove("modal-cart__show");
-    overlay.classList.remove("modal-overlay__show");
+    popup.classList.remove('modal-cart__show');
+    overlay.classList.remove('modal-overlay__show');
   };
 });
 
-overlay.addEventListener("click", function (evt) {
+overlay.addEventListener('click', function (evt) {
   evt.preventDefault();
-  popup.classList.remove("modal-cart__show");
-  overlay.classList.remove("modal-overlay__show");
+  popup.classList.remove('modal-cart__show');
+  overlay.classList.remove('modal-overlay__show');
 });

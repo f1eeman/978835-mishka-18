@@ -1,6 +1,7 @@
 @media (min-width: $desktop-width) {
   .offer-list {
     display: flex;
+    flex-wrap: wrap;
 
     @include list-reset();
   }

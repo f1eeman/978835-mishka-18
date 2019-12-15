@@ -30,6 +30,8 @@
   &:active .copyright__logo {
     fill: $color-element-footer-bg-active;
   }
+
+  @include ie-bug-fix();
 }
 
 .copyright__text {

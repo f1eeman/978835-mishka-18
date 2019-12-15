@@ -8,6 +8,8 @@
 
 .page-footer__logo {
   display: none;
+
+  @include ie-bug-fix();
 }
 
 .page-footer__logo-icon {

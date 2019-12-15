@@ -69,6 +69,8 @@
 }
 
 .catalogues__link--toys {
+  overflow: hidden;
+
   &::after {
     background-color: $color-ctlgs-toy-bg-hover;
   }
@@ -104,6 +106,7 @@
 @media (min-width: $tablet-width) {
   .catalogues__list {
     display: flex;
+    flex-wrap: wrap;
     width: 768px;
     margin: 0 auto;
     padding: 0 50px;

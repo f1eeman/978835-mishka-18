@@ -4,6 +4,7 @@
 
 .popular-item__wrap {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-start;
   padding-top: 25px;
