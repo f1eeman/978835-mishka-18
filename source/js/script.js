@@ -34,7 +34,7 @@ for (var i = 0; i < elements.length; i++) {
 };
 
 window.addEventListener("keydown", function(evt) {
-  if (evt.keyCode === 27 && popup.classList.contains('modal-cart__show')) {
+  if (evt.keyCode === 27 && popup.classList.contains("modal-cart__show")) {
     evt.preventDefault();
     popup.classList.remove("modal-cart__show");
     overlay.classList.remove("modal-overlay__show");
