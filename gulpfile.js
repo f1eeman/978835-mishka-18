@@ -85,6 +85,7 @@ gulp.task("server", function () {
 gulp.task("vendor", function () {
   return gulp.src([
     "node_modules/three/build/three.module.min.js",
+    "node_modules/three/build/three.core.min.js",
     "node_modules/gsap/dist/gsap.min.js",
     "node_modules/gsap/dist/ScrollTrigger.min.js"
   ])
