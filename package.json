@@ -1,37 +1,40 @@
 {
   "name": "mishka-18",
-  "version": "17.0.0",
+  "version": "18.0.0",
   "private": true,
-  "description": "Личный проект «Мишка» от HTML Academy",
+  "description": "Личный проект «Мишка» от HTML Academy",
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "1.x",
-    "autoprefixer": "9.5.x",
-    "browser-sync": "2.26.x",
-    "gulp": "4.0.x",
-    "gulp-csso": "^4.0.1",
-    "gulp-imagemin": "^6.2.0",
-    "gulp-plumber": "1.2.x",
-    "gulp-postcss": "8.0.x",
-    "gulp-posthtml": "^3.0.4",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-sourcemaps": "2.6.x",
-    "gulp-svgstore": "^7.0.1",
-    "gulp-webp": "^4.0.1",
-    "posthtml-include": "^1.3.2",
-    "stylelint": "10.1.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "@htmlacademy/editorconfig-cli": "3.0.0",
+    "autoprefixer": "10.5.1",
+    "browser-sync": "3.0.4",
+    "del": "5.1.0",
+    "gsap": "3.15.0",
+    "gulp": "4.0.2",
+    "gulp-csso": "4.0.1",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "10.0.0",
+    "gulp-posthtml": "3.0.5",
+    "gulp-rename": "2.1.0",
+    "gulp-sass": "5.1.0",
+    "gulp-sourcemaps": "3.0.0",
+    "gulp-svgstore": "9.0.0",
+    "playwright": "^1.61.1",
+    "postcss": "8.5.4",
+    "posthtml-include": "1.7.4",
+    "sass": "1.101.0",
+    "stylelint": "16.26.1",
+    "stylelint-config-htmlacademy": "4.4.0",
+    "three": "0.184.0"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "stylelint": "stylelint \"source/sass/**/*.scss\"",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "start": "gulp start"
   },
   "browserslist": [
     "last 2 versions",
-    "IE 11",
     "Firefox ESR"
   ],
   "editorconfig-cli": [
@@ -43,9 +46,6 @@
     "source/sass/**/*.{sass,scss}"
   ],
   "engines": {
-    "node": "14.x"
-  },
-  "dependencies": {
-    "del": "^5.1.0"
+    "node": ">=18"
   }
 }
