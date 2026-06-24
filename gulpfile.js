@@ -82,5 +82,14 @@ gulp.task("server", function () {
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
+gulp.task("vendor", function () {
+  return gulp.src([
+    "node_modules/three/build/three.module.min.js",
+    "node_modules/gsap/dist/gsap.min.js",
+    "node_modules/gsap/dist/ScrollTrigger.min.js"
+  ])
+  .pipe(gulp.dest("build/js/vendor"));
+});
+
+gulp.task("build", gulp.series("clean", "copy", "vendor", "css", "sprite", "html"));
 gulp.task("start", gulp.series("build", "server"));
