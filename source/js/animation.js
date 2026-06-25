@@ -274,7 +274,7 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
 
   var featuresTrigger = { trigger: '.features', start: 'top 78%' };
 
-  // Цветок: вырастает из нуля с лёгким покачиванием
+  // Иконки: появляются с индивидуальными входами
   gsap.from('.features__item--eco-material .features__icon', {
     scrollTrigger: featuresTrigger,
     duration: 0.9,
@@ -284,23 +284,7 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     ease: 'back.out(2)',
     delay: 0
   });
-  ScrollTrigger.create({
-    trigger: '.features',
-    start: 'top 78%',
-    once: true,
-    onEnter: function () {
-      gsap.to('.features__item--eco-material .features__icon', {
-        rotation: 8,
-        duration: 2.5,
-        delay: 0.9,
-        ease: 'sine.inOut',
-        yoyo: true,
-        repeat: -1
-      });
-    }
-  });
 
-  // Кошелёк: вылетает слева как монетка
   gsap.from('.features__item--nordic-style .features__icon', {
     scrollTrigger: featuresTrigger,
     duration: 0.7,
@@ -311,7 +295,6 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     delay: 0.12
   });
 
-  // Сердце: пульсирует после появления
   gsap.from('.features__item--likes .features__icon', {
     scrollTrigger: featuresTrigger,
     duration: 0.5,
@@ -320,24 +303,7 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     ease: 'back.out(3)',
     delay: 0.24
   });
-  ScrollTrigger.create({
-    trigger: '.features',
-    start: 'top 78%',
-    once: true,
-    onEnter: function () {
-      gsap.to('.features__item--likes .features__icon', {
-        scale: 1.25,
-        duration: 0.35,
-        delay: 1.0,
-        ease: 'power1.inOut',
-        yoyo: true,
-        repeat: -1,
-        repeatDelay: 1.2
-      });
-    }
-  });
 
-  // Клубок: крутится как настоящий клубок пряжи
   gsap.from('.features__item--handmade .features__icon', {
     scrollTrigger: featuresTrigger,
     duration: 0.8,
@@ -347,22 +313,7 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     ease: 'back.out(1.7)',
     delay: 0.36
   });
-  ScrollTrigger.create({
-    trigger: '.features',
-    start: 'top 78%',
-    once: true,
-    onEnter: function () {
-      gsap.to('.features__item--handmade .features__icon', {
-        rotation: '+=360',
-        duration: 6,
-        delay: 0.8,
-        ease: 'none',
-        repeat: -1
-      });
-    }
-  });
 
-  // Ракета: взлетает снизу вверх
   gsap.from('.features__item--domestic-production .features__icon', {
     scrollTrigger: featuresTrigger,
     duration: 0.8,
@@ -372,23 +323,7 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     ease: 'power3.out',
     delay: 0.48
   });
-  ScrollTrigger.create({
-    trigger: '.features',
-    start: 'top 78%',
-    once: true,
-    onEnter: function () {
-      gsap.to('.features__item--domestic-production .features__icon', {
-        y: -4,
-        duration: 1.2,
-        delay: 0.9,
-        ease: 'sine.inOut',
-        yoyo: true,
-        repeat: -1
-      });
-    }
-  });
 
-  // Подарок: падает сверху и слегка прыгает
   gsap.from('.features__item--gift-wrap .features__icon', {
     scrollTrigger: featuresTrigger,
     duration: 0.7,
@@ -397,6 +332,72 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     autoAlpha: 0,
     ease: 'bounce.out',
     delay: 0.6
+  });
+
+  // Индивидуальные петли: каждая иконка со своим характером
+  ScrollTrigger.create({
+    trigger: '.features',
+    start: 'top 78%',
+    once: true,
+    onEnter: function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      // Цветок — колышется как на ветру
+      gsap.to('.features__item--eco-material .features__icon', {
+        rotation: 12,
+        duration: 2.5,
+        delay: 1.0,
+        ease: 'sine.inOut',
+        yoyo: true,
+        repeat: -1,
+        transformOrigin: '50% 100%'
+      });
+
+      // Кошелёк — мягко плавает вверх-вниз
+      gsap.to('.features__item--nordic-style .features__icon', {
+        y: -5,
+        duration: 1.8,
+        delay: 0.9,
+        ease: 'sine.inOut',
+        yoyo: true,
+        repeat: -1
+      });
+
+      // Сердце — двойной удар: lub-dub, пауза, повтор
+      var heartTl = gsap.timeline({ repeat: -1, delay: 0.8 });
+      heartTl
+        .to('.features__item--likes .features__icon', { scale: 1.28, duration: 0.12, ease: 'power2.out' })
+        .to('.features__item--likes .features__icon', { scale: 1,    duration: 0.10, ease: 'power2.in' })
+        .to('.features__item--likes .features__icon', { scale: 1.16, duration: 0.10, ease: 'power2.out' })
+        .to('.features__item--likes .features__icon', { scale: 1,    duration: 0.10, ease: 'power2.in' })
+        .to('.features__item--likes .features__icon', { scale: 1,    duration: 1.4  }); // пауза
+
+      // Клубок — непрерывный медленный спин
+      gsap.to('.features__item--handmade .features__icon', {
+        rotation: '+=360',
+        duration: 6,
+        delay: 1.2,
+        ease: 'none',
+        repeat: -1
+      });
+
+      // Ракета — парит вверх-вниз
+      gsap.to('.features__item--domestic-production .features__icon', {
+        y: -7,
+        duration: 1.2,
+        delay: 1.1,
+        ease: 'power1.inOut',
+        yoyo: true,
+        repeat: -1
+      });
+
+      // Подарок — нетерпеливый прыжок с паузой
+      var giftTl = gsap.timeline({ repeat: -1, delay: 1.0 });
+      giftTl
+        .to('.features__item--gift-wrap .features__icon', { y: -8, duration: 0.4,  ease: 'back.out(2)' })
+        .to('.features__item--gift-wrap .features__icon', { y: 0,  duration: 0.5,  ease: 'bounce.out' })
+        .to('.features__item--gift-wrap .features__icon', { y: 0,  duration: 1.6 }); // пауза
+    }
   });
 
   // Reviews fade+rise
