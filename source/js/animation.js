@@ -1,5 +1,11 @@
 import * as THREE from './vendor/three.module.min.js';
 
+// ─── Shared state between Three.js scene and GSAP ────────────────────────────
+var scrollProgress = 0;           // 0 = hero fully visible, 1 = scrolled past
+var sceneMeshes = [];             // wireframe shape meshes
+var sceneParticleMat = null;      // particle PointsMaterial
+var particleEntrance = { v: 0 }; // GSAP animates this 0 → 1 on load
+
 // ─── Three.js: floating shapes in the hero section ───────────────────────────
 
 var promo = document.querySelector('.promo');
@@ -42,7 +48,7 @@ if (promo) {
   // Teal brand palette
   var COLORS = [0x63d1bb, 0x46c1ae, 0x96e0d1, 0xffffff, 0x62d1ba];
 
-  // Particle cloud
+  // Particle cloud — opacity fully owned by tick() via particleEntrance.v × (1 - scrollProgress)
   var COUNT = 140;
   var positions = new Float32Array(COUNT * 3);
   for (var i = 0; i < COUNT; i++) {
@@ -52,12 +58,14 @@ if (promo) {
   }
   var ptGeo = new THREE.BufferGeometry();
   ptGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-  var ptMat = new THREE.PointsMaterial({ color: 0x63d1bb, size: 0.07, transparent: true, opacity: 0.65 });
+  var ptMat = new THREE.PointsMaterial({ color: 0x63d1bb, size: 0.07, transparent: true, opacity: 0 });
   var particles = new THREE.Points(ptGeo, ptMat);
   scene.add(particles);
+  sceneParticleMat = ptMat;
 
   // Floating wireframe shapes
-  var meshes = [];
+  // Scale starts at 0, entranceFactor starts at 0 — GSAP drives both during entrance.
+  // tick() owns position and material.opacity; it never writes to scale.
   var SHAPE_COUNT = 10;
   for (var s = 0; s < SHAPE_COUNT; s++) {
     var geoType = s % 3;
@@ -72,7 +80,7 @@ if (promo) {
     var mat = new THREE.MeshPhongMaterial({
       color: COLORS[s % COLORS.length],
       transparent: true,
-      opacity: 0.45,
+      opacity: 0,
       wireframe: true
     });
     var mesh = new THREE.Mesh(geo, mat);
@@ -81,16 +89,28 @@ if (promo) {
       (Math.random() - 0.5) * 9,
       -4 + Math.random() * 2.5
     );
+    mesh.scale.set(0, 0, 0);
     mesh.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, 0);
+
+    // Scatter target computed once at init so scroll up/down is stable
+    var sAngle = Math.random() * Math.PI * 2;
+    var sRadius = 12 + Math.random() * 8;
+
     mesh.userData = {
       rx: (Math.random() - 0.5) * 0.014,
       ry: (Math.random() - 0.5) * 0.014,
+      baseX: mesh.position.x,
       baseY: mesh.position.y,
+      baseZ: mesh.position.z,
       speed: 0.35 + Math.random() * 0.55,
-      amp: 0.18 + Math.random() * 0.28
+      amp: 0.18 + Math.random() * 0.28,
+      scatterX: mesh.position.x + Math.cos(sAngle) * sRadius,
+      scatterY: mesh.position.y + (Math.random() - 0.5) * 8,
+      scatterZ: mesh.position.z - 3 - Math.random() * 4,
+      entranceFactor: 0  // GSAP animates 0 → 1; tick reads it for opacity
     };
     scene.add(mesh);
-    meshes.push(mesh);
+    sceneMeshes.push(mesh);
   }
 
   // Lighting
@@ -123,17 +143,29 @@ if (promo) {
   (function tick() {
     requestAnimationFrame(tick);
     var t = clock.getElapsedTime();
+    var sp = scrollProgress;
 
+    // Particles
     particles.rotation.y = t * 0.04;
+    ptMat.opacity = 0.65 * particleEntrance.v * (1 - sp);
 
-    meshes.forEach(function (m) {
+    // Shapes: spin + sinusoidal float blended with scroll scatter
+    sceneMeshes.forEach(function (m) {
       m.rotation.x += m.userData.rx;
       m.rotation.y += m.userData.ry;
-      m.position.y = m.userData.baseY + Math.sin(t * m.userData.speed) * m.userData.amp;
+
+      var floatY = m.userData.baseY + Math.sin(t * m.userData.speed) * m.userData.amp;
+      m.position.x = m.userData.baseX + (m.userData.scatterX - m.userData.baseX) * sp;
+      m.position.y = floatY + (m.userData.scatterY - floatY) * sp;
+      m.position.z = m.userData.baseZ + (m.userData.scatterZ - m.userData.baseZ) * sp;
+      m.material.opacity = 0.45 * m.userData.entranceFactor * (1 - sp);
     });
 
-    curRotX += (targetRotX - curRotX) * 0.04;
-    curRotY += (targetRotY - curRotY) * 0.04;
+    // Camera: pull back as hero scrolls away; cursor influence fades with scroll
+    camera.position.z = 6 + sp * 3;
+    var cursorWeight = 1 - sp * 0.8;
+    curRotX += (targetRotX * cursorWeight - curRotX) * 0.04;
+    curRotY += (targetRotY * cursorWeight - curRotY) * 0.04;
     camera.rotation.x = curRotX;
     camera.rotation.y = curRotY;
 
@@ -149,12 +181,59 @@ if (promo) {
   });
 }
 
-// ─── GSAP: scroll & entrance animations ──────────────────────────────────────
+// ─── GSAP: entrance + scroll dissolution + section animations ────────────────
 
 if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 
-  // Hero title + catalogues entrance
+  // ─── Three.js scene entrance + scroll-driven dissolution ──────────────────
+
+  if (sceneMeshes.length) {
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (reducedMotion) {
+      // Skip entrance — appear immediately
+      sceneMeshes.forEach(function (m) {
+        m.scale.set(1, 1, 1);
+        m.userData.entranceFactor = 1;
+      });
+      particleEntrance.v = 1;
+    } else {
+      // Staggered entrance: shapes fly in from scale 0 with bounce
+      var entranceTl = gsap.timeline({ delay: 0.1 });
+      sceneMeshes.forEach(function (m, idx) {
+        entranceTl.to(m.scale, {
+          x: 1, y: 1, z: 1,
+          duration: 0.7,
+          ease: 'back.out(2)'
+        }, idx * 0.08);
+        entranceTl.to(m.userData, {
+          entranceFactor: 1,
+          duration: 0.5
+        }, idx * 0.08 + 0.1);
+      });
+
+      // Particles fade up in parallel
+      gsap.to(particleEntrance, {
+        v: 1,
+        duration: 1.2,
+        delay: 0.2,
+        ease: 'power2.out'
+      });
+    }
+
+    // Scroll-driven dissolution — scrub makes it fully reversible
+    ScrollTrigger.create({
+      trigger: '.promo',
+      start: 'top top',
+      end: 'bottom top',
+      scrub: true,
+      onUpdate: function (self) { scrollProgress = self.progress; }
+    });
+  }
+
+  // ─── Hero text entrance ────────────────────────────────────────────────────
+
   gsap.from('.promo__title', {
     duration: 1.2,
     y: 55,
@@ -205,7 +284,6 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     ease: 'back.out(2)',
     delay: 0
   });
-  // После появления — медленно покачивается
   ScrollTrigger.create({
     trigger: '.features',
     start: 'top 78%',
