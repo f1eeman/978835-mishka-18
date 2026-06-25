@@ -101,6 +101,25 @@ if (promo) {
 
   var clock = new THREE.Clock();
 
+  // Cursor-tracking state
+  var targetRotX = 0, targetRotY = 0, curRotX = 0, curRotY = 0;
+
+  if (!window.matchMedia('(hover: none)').matches) {
+    window.addEventListener('mousemove', function (e) {
+      var rect = promo.getBoundingClientRect();
+      if (e.clientX < rect.left || e.clientX > rect.right ||
+          e.clientY < rect.top  || e.clientY > rect.bottom) {
+        targetRotX = 0;
+        targetRotY = 0;
+      } else {
+        var nx = (e.clientX - rect.left) / rect.width  * 2 - 1;
+        var ny = (e.clientY - rect.top)  / rect.height * 2 - 1;
+        targetRotY =  nx * 0.10;
+        targetRotX = -ny * 0.06;
+      }
+    });
+  }
+
   (function tick() {
     requestAnimationFrame(tick);
     var t = clock.getElapsedTime();
@@ -112,6 +131,11 @@ if (promo) {
       m.rotation.y += m.userData.ry;
       m.position.y = m.userData.baseY + Math.sin(t * m.userData.speed) * m.userData.amp;
     });
+
+    curRotX += (targetRotX - curRotX) * 0.04;
+    curRotY += (targetRotY - curRotY) * 0.04;
+    camera.rotation.x = curRotX;
+    camera.rotation.y = curRotY;
 
     renderer.render(scene, camera);
   }());
