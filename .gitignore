@@ -11,3 +11,5 @@ node_modules/
 npm-debug.*
 Thumbs.db
 .tool-versions
+.playwright-mcp/
+skills-lock.json
